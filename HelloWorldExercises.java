@@ -25,10 +25,21 @@ public class HelloWorldExercises {
         System.out.printf("Este es un mensaje con formato: %s, %d", "Hola", 123); 
         System.console().printf("Este es un mensaje con formato en consola: %s, %d", "Hola", 123); // Esto imprime un mensaje con formato en la consola
         System.out.println(); // Esto imprime una linea vacia
-        
-        
 
+        //6. Utiliza varios println para imprimir una frase.
+        System.out.println("Esta");
+        System.out.println("es");
+        System.out.println("una");
+        System.out.println("frase");
 
+        //7. Imprime un diseño ASCII (Por ejemplo: Una cara feliz, un corazón, una casa, etc.)
+        System.out.println("   -----   ");
+        System.out.println("  /     \\  ");
+        System.out.println(" |  O O  | ");
+        System.out.println(" |   ^   | ");
+        System.out.println(" |  \\_/  | ");
+        System.out.println("  \\     /  ");
+        System.out.println("   -----   ");
         
     }
 }
