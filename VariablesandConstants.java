@@ -33,7 +33,7 @@ public class VariablesandConstants{
         // Constants
 
         final String EMAIL = "lupareja2505@gmail.com";
-        //EMAIL = "Agente-707@gmail.com"; Es constante
+        //EMAIL = "Agente-707@gmail.com"; Es constante, ya no puede cambiar su valor
         System.out.println(EMAIL);
 
         
