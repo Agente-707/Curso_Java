@@ -92,9 +92,13 @@ public class Operators {
         // Operadores Unarios
         System.out.println("----Operadores Unarios----");
         System.out.println(+b); // Nos devuelve el mismo valor (Positivo)
-        System.out.println(-b); // Nos devuelve el valor negativo
         System.out.println(++b); // b = b + 1, luego lo imprime
         System.out.println(b++); // primero lo imprime, luego b = b + 1
-        System.out.println(b); 
+        System.out.println(b);
+
+        System.out.println(-b); // Nos devuelve el valor negativo de b
+        System.out.println(--b); // b = b - 1, luego lo imprime
+        System.out.println(b--); // primero lo imprime, luego b = b - 1
+        System.out.println(b);
     }
 }
