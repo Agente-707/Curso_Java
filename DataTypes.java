@@ -15,11 +15,25 @@ public class DataTypes {
         myBoolean = false;
         System.out.println(myBoolean);
 
-        String myString = "Hola, Java";
+        String myString = "Hola, Java"; // Nota: String no es un tipo de dato primitivo, es una clase.
         System.out.println(myString);
 
-        // Tipo de dato en tiempo de compilacion
+        System.out.println(myString.getClass().getSimpleName()); // imprime el tipo de dato de "myString" 
+        // => String
+        
+        // Nota: Esto solo funciona para clases.
 
-        System.out.println(myString.getClass().getSimpleName());
+        Boolean myBoolean2 = false; // Clase tipo "Boolean"
+        System.out.println(myBoolean2);
+
+        Double myDouble2 = 5.12; // Clase tipo "Double"
+        System.out.println(myDouble2); 
+
+        System.out.println(myBoolean2.getClass().getSimpleName());
+        // => Boolean
+
+        System.out.println(myDouble2.getClass().getSimpleName());
+        // => Double
+
     }
 }
