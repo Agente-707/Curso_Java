@@ -82,7 +82,12 @@ public class Strings {
         // formateo para enteros '%d'
         // formateo para decimales (floats) '%f'
         var age = 19;
-        String.out.println(String.format("Hola, me llamo %s y tengo %d.", name, age));
+        var number = 10;
+        var height = 1.75;
+        System.out.println(String.format("Hola, me llamo %s y tengo %d años.", name, age));
+        System.out.println(String.format("Hola, me llamo %s, tengo %d años y mido %f.", name, age, height));
+        System.out.println(String.format("%d, %d", number, age)); // Imprime los valores en el orden que le indicamos
+        System.out.println(String.format("%d, %d, %d", number, age)); // Error: el tercer %d no llama a ningun otro entero
         
 
         
