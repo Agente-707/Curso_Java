@@ -23,6 +23,8 @@ public class Strings {
         System.out.println(name.charAt(1)); // => u
         System.out.println(name.charAt(2)); // => i
         System.out.println(name.charAt(3)); // => s
+        //System.out.println(name.charAt(4)); => Error el indice 4 no se encuentra dentro de nustro string
+        
         
 
     }
