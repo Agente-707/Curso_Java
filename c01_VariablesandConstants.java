@@ -1,4 +1,4 @@
-public class VariablesandConstants{
+public class c01_VariablesandConstants{
     public static void main(String[] args){
 
         // Variables

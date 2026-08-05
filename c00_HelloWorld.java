@@ -9,7 +9,7 @@ de varias lineas
 
 // Hola mundo en Java
 // Nombre de la clase: HelloWorld
-public class HelloWorld {
+public class c00_HelloWorld {
     // Sintaxsis inicial para ejecutar el programa
     public static void main(String[] args) {
         System.out.println("Hello, World!"); // System.out.println => Imprime el mensaje dentro del parentesis con un salto de lineal al final

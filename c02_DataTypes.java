@@ -1,4 +1,4 @@
-public class DataTypes {
+public class c02_DataTypes {
     public static void main(String[] args) {
 
         // Tipos de datos primitivos

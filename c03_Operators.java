@@ -1,4 +1,4 @@
-public class Operators {
+public class c03_Operators {
     public static void main(String[] args){
         // Operadores Aritmeticos
         System.out.println("----Operadores Aritmeticos----");
