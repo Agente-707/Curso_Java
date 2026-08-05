@@ -1,4 +1,5 @@
-public class c01_VariablesandConstants{
+package c01_variablesandConstants;
+public class VariablesandConstants{
     public static void main(String[] args){
 
         // Variables

@@ -1,4 +1,5 @@
-public class c03_OperatorsExercises {
+package c02_Operators;
+public class OperatorsExercises {
     public static void main(String[] args){
         // 1. Crea una variable con el resultado de cada operacion aritmetica.
 

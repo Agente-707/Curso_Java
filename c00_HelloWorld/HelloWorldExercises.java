@@ -1,4 +1,5 @@
-public class c00_HelloWorldExercises {
+package c00_HelloWorld;
+public class HelloWorldExercises {
     public static void main(String[] args) {
         // 1. Imprime un mensaje que diga tu nombre
         System.out.println("Mi nombre es Agente-707"); // println imprime un mensaje y luego hace un salto de linea

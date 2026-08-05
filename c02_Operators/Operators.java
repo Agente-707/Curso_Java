@@ -1,4 +1,5 @@
-public class c03_Operators {
+package c02_Operators;
+public class Operators {
     public static void main(String[] args){
         // Operadores Aritmeticos
         System.out.println("----Operadores Aritmeticos----");

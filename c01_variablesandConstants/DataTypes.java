@@ -1,4 +1,5 @@
-public class c02_DataTypes {
+package c01_variablesandConstants;
+public class DataTypes {
     public static void main(String[] args) {
 
         // Tipos de datos primitivos
