@@ -28,7 +28,7 @@ public class ConditionalsExerecises {
         if(c>=0){
             System.out.println(String.format("%d es un número positivo.",c));
         }else{
-            Sytem.out.println(String.format("%d es un número negativo.",c));
+            System.out.println(String.format("%d es un número negativo.",c));
         }
 
         //4. Crea un programa que diga si un número es par o impar.
@@ -77,9 +77,9 @@ public class ConditionalsExerecises {
         //7. Simula un sistema notas: muestra "Sobresaliente", "Aprobado" o "Suspenso" segun la nota (1-100).
         int mi_nota = -100;
 
-        if(mi_nota<=100 and mi_nota>=90){
+        if(mi_nota<=100 && mi_nota>=90){
             System.out.println("Sobresaliente");
-        } else if (mi_nota<90 and mi_nota>=10){
+        } else if (mi_nota<90 && mi_nota>=10){
             System.out.println("Aprobado");
         } else if (mi_nota<10){
             System.out.println("Suspenso");
@@ -105,9 +105,9 @@ public class ConditionalsExerecises {
         }
 
         //10. Usa tres variables a, b, c y muestra cual es el mayor de las tres.
-        var a = 1;
-        var b = 2;
-        var c = 3;
+        a = 1;
+        b = 2;
+        c = 3;
 
         if(a>b && a>c){
             System.out.println("'a' es mayor que 'b' y 'c'");
