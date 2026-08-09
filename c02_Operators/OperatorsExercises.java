@@ -1,8 +1,12 @@
 package c02_Operators;
 public class OperatorsExercises {
     public static void main(String[] args){
+        /*
+        Algunos ejercicios simples con operadores 
+        */
+        
         // 1. Crea una variable con el resultado de cada operacion aritmetica.
-
+        // Solución:
         int a = 10 + 5;
         System.out.println(a);
         a = 10 - 5;
@@ -13,7 +17,7 @@ public class OperatorsExercises {
         System.out.println(a);
 
         // 2. Crea una variable para cada tipo de operacion de asignacion.
-
+        // Solución:
         int b = 0;
         b += 10;
         System.out.println(b);
@@ -31,20 +35,20 @@ public class OperatorsExercises {
         System.out.println(e);
 
         // 3. Utiliza el operador logico 'and'.
-
+        // Solución:
         System.out.println(true && false);
         System.out.println(4>5 && "Hola"=="adios");
 
         // 4. Utiliza el operador logico 'or'.
-
+        // Solución:
         System.out.println(5<7 || 23.0 == 23);
 
         // 5. Combina ambos operadores.
-
+        // Solución:
         System.out.println(("AAAA" == "aaaa" && 10.2 > 10.222) || 12 <= 113);
 
         // 6. Imprime tres ejemplos de uso de operadores unarios.
-
+        // Solución:
         System.out.println(-b);
         System.out.println(++e);
         System.out.println(a--);
