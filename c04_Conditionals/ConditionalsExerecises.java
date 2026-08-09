@@ -2,7 +2,13 @@ package c04_Conditionals;
 
 public class ConditionalsExerecises {
     public static void main(String[] args){
+        /*
+        Algunos ejercicios simples con condicionales
+        para practicar
+        */
+        
         //1. Establece la edad de un usuario y muestra si puede votar.
+        // Solución:
         int age = 19;
         if(age >= 18){
             System.out.println("El usuario sí puede votar.");
@@ -11,6 +17,7 @@ public class ConditionalsExerecises {
         }
 
         //2. Declara dos números y muestra cuál es mayor, o si son iguales.
+        // Solución:
         int a = 10;
         int b = 7;
 
@@ -23,6 +30,7 @@ public class ConditionalsExerecises {
         }
 
         //3. Dado un número, verifica si es positivo, negativo o cero.
+        // Solución:
         int c = -10;
 
         if(c>=0){
@@ -32,6 +40,7 @@ public class ConditionalsExerecises {
         }
 
         //4. Crea un programa que diga si un número es par o impar.
+        // Solución:
         int my_number = 1001;
 
         if(my_number % 2 == 0){
@@ -41,6 +50,7 @@ public class ConditionalsExerecises {
         }
 
         //5. Verifica si un número está en el rango de 1 a 100.
+        // Solución:
         int six_seven = 67; //xd
 
         if(six_seven>1 && six_seven<100){
@@ -50,6 +60,7 @@ public class ConditionalsExerecises {
         }
 
         //6. Declara una variable con el día de la semana (1-7) y muestra su nombre con un switch.
+        // Solución:
         int day = 5;
         switch(day){
             case 1:
@@ -75,6 +86,7 @@ public class ConditionalsExerecises {
         }
 
         //7. Simula un sistema notas: muestra "Sobresaliente", "Aprobado" o "Suspenso" segun la nota (1-100).
+        // Solución:
         int mi_nota = -100;
 
         if(mi_nota<=100 && mi_nota>=90){
@@ -86,6 +98,7 @@ public class ConditionalsExerecises {
         }
 
         //8. Escribe un programa que determine si puedes entrar al cine: debes tener almenos 15 años o ir acompañado.
+        // Solución:
         int edad = 19;
         boolean with_an_adult = true;
         if(edad>=15 || with_an_adult){
@@ -95,6 +108,7 @@ public class ConditionalsExerecises {
         }
 
         //9. Crea un programa que diga si una letra es vocal o consonante (char).
+        // Solución:
         char my_char = 'e';
         if(my_char=='a' || my_char=='e' || my_char=='i' || my_char=='o' || my_char=='u'){
             System.out.println("Tu letra es una vocal minuscula.");
@@ -105,6 +119,7 @@ public class ConditionalsExerecises {
         }
 
         //10. Usa tres variables a, b, c y muestra cual es el mayor de las tres.
+        // Solución:
         a = 1;
         b = 2;
         c = 3;
