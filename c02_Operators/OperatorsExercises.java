@@ -3,6 +3,7 @@ public class OperatorsExercises {
     public static void main(String[] args){
         /*
         Algunos ejercicios simples con operadores 
+        para practicar
         */
         
         // 1. Crea una variable con el resultado de cada operacion aritmetica.
