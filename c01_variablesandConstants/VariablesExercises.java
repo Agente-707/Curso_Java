@@ -3,6 +3,7 @@ public class VariablesExercises {
     public static void main(String[] args) {
         /*
         Ejecicios simples con variables y constantes
+        para practicar
         */
         
         // 1. Declara una variable de tipo String y asignale tu nombre.
