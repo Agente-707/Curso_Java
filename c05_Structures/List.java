@@ -76,11 +76,17 @@ public class List {
         // Ahora solo hay 2 elementos en 'names'
         System.out.println(names.size()); // => 2
 
+        
         // Buscar elementos 'contain'
         
         names.contain("Luis");    // "Luis" pertenece a en 'names' => true 
         names.contain("XxLuisxX") // "XxLuisxX" ya no pertenece a 'names'=> false
-        
+
+            
+        // Limpiar ArrayList 'clear'
+            
+        names.clear(); // Elimina todos los elementos del ArrayList
+        System.out.println(names.size()); // => 0
 
     }
 }
