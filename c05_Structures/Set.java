@@ -25,7 +25,11 @@ public class Set {
         names.add("Agente-707"); // Le añadimos 3 elementos
         System.out.println(names.size()); // => 3
 
+        numbers.add(1);
+        numbers.add(2);
+        numbers.add(3);
 
+        
         // Acceder a los elementos y modificarlos
 
         System.out.println(names); // => Imprimimos el set
@@ -68,6 +72,22 @@ public class Set {
           los elementos que repitamos no se van a 
           agregar dentro del set
         */
+
+        // Conjuntos 'addAll'
+
+        // names.addAll(numbers); Error: No podemos añadir elementos de un set a otro si no son compatibles (string - integer)
+
+        var countries = new HashSet<String>(); // set de strings (nombres de paises)
+        countries.add("Perú");
+        countries.add("Argentina");
+        countries.add("Brasil");
+        countries.add("Colombia");
+
+        names.addAll(countries); // 'names y 'countries' son sets de strings (son compatibles)
+
+        System.out.println(names); // => los nombres y los paises ahora estan dentro del set 'names'
+
+            
 
         
 
