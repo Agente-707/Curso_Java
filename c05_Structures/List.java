@@ -71,8 +71,22 @@ public class List {
 
 
         // Eliminar elementos 'remove'
-        names.remove(2);
+        names.remove(2); // Eliminamos el elemento del índice 2
         // System.out.println(names.get(2)); => Error: El elemento del índice 2 ya no existe
+        // Ahora solo hay 2 elementos en 'names'
+        System.out.println(names.size()); // => 2
+
+        
+        // Buscar elementos 'contain'
+        
+        names.contains("Luis");    // "Luis" pertenece a en 'names' => true 
+        names.contains("XxLuisxX"); // "XxLuisxX" ya no pertenece a 'names'=> false
+
+            
+        // Limpiar ArrayList 'clear'
+            
+        names.clear(); // Elimina todos los elementos del ArrayList
+        System.out.println(names.size()); // => 0
 
     }
 }
