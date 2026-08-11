@@ -94,9 +94,16 @@ public class Maps {
         names.putIfAbsent("Agente-707", "agente-707@gmail.com") // Lo añade solo si no existe dentro del map
         System.out.println(names);
 
-        
 
-        
+        // Otras operaciones
+
+        // isEmpty
+        // Comprueba si nuestro map esta vacío o no (true/false)
+        System.out.println(names.isEmpty()); // => false
+
+        // Values
+        // Nos devuelve una lista de los valores de nuestro map
+        System.out.println(names.values()); // Crea una lista solo con los valores
 
     }
 }
