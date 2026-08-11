@@ -43,12 +43,19 @@ public class Maps {
         System.out.println(names.get("holaaaa")); // => null - esa llave no existe en 'names'
 
 
-        // Verificar elementos 'containsKey'
+        // Verificar elementos 'containsKey'  
         // Existe la llave => true
         // No existe la llave => false
 
         System.out.println(names.containsKey("Luis")); // => true
         System.out.println(names.containsKey("holaaaa")); // => false
+
+        // Verificar elementos 'containValue'
+        // Existe el valor => true
+        // No existe el valor => false
+
+        System.out.println(names.containsValue("luis@gmail.com")); // => true
+        System.out.println(names.containsValue("holaaaa")); // => false
 
 
     }
