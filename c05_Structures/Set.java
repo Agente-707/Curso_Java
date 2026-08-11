@@ -26,7 +26,7 @@ public class Set {
         System.out.println(names.size()); // => 3
 
 
-        // Acceder a los elementos
+        // Acceder a los elementos y modificarlos
 
         System.out.println(names); // => Imprimimos el set
         /*
@@ -39,7 +39,28 @@ public class Set {
 
         Lo mismo si intentamos modificarlos con
         'names.set(ind, "elemento")'
+        nos saltara un error.
         */
+
+
+        // Buscar elementos
+
+        System.out.println(names.contains("Agente-707")); // => true
+        System.out.println(names.contains("Holaaaa"));    // => false
+        // Sí es posible buscar elementos en un set
+
+
+        // Añadir elementos repetidos
+
+        System.out.println(names);
+        names.add("Luis");
+        names.add("Luis");
+        names.add("Luis");
+        names.add("Luis");
+        names.add("Luis");
+        System.out.println(names);
+
+        
 
         
 
