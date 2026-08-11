@@ -52,17 +52,29 @@ public class Set {
 
         // Añadir elementos repetidos
 
-        System.out.println(names);
+        System.out.println(names); // Imprime tres elementos
         names.add("Luis");
         names.add("Luis");
         names.add("Luis");
         names.add("Luis");
-        names.add("Luis");
-        System.out.println(names);
+        names.add("Luis"); // Añado 5 veces mi nombre
+        System.out.println(names); // El set sigue igual (solo tiene 3 elementos)
+
+        /*
+          Nota:
+          A diferencia de los ArrayList,
+          no podemos agregar elementos repetidos
+          a los sets, no nos saltara error, solo 
+          los elementos que repitamos no se van a 
+          agregar dentro del set
+        */
 
         
 
+
         
+
+
 
 
     }
