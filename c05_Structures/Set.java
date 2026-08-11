@@ -73,10 +73,11 @@ public class Set {
           agregar dentro del set
         */
 
-        // Conjuntos 'addAll'
+
+        // Conjuntos 'addAll', 'removeAll' y 'retainAll'
 
         // names.addAll(numbers); Error: No podemos añadir elementos de un set a otro si no son compatibles (string - integer)
-
+        // addAll toma todos los elementos de un set y los pasa a otro siempre y cuando los elementos sean del mismo tipo 
         var countries = new HashSet<String>(); // set de strings (nombres de paises)
         countries.add("Perú");
         countries.add("Argentina");
@@ -84,8 +85,34 @@ public class Set {
         countries.add("Colombia");
 
         names.addAll(countries); // 'names y 'countries' son sets de strings (son compatibles)
-
         System.out.println(names); // => los nombres y los paises ahora estan dentro del set 'names'
+
+        names.removeAll(countries); // con 'removeAll' podemos quitar los elementos del set 'countries' de 'names'
+        System.out.println(names); // => Ahora solo quedaron los nombres (los paises fueron removidos)
+
+        names.retainAll(countries); // con 'retainAll' podemos eliminar los elementos comunes del set y quedarnos con los nuevos
+        System.out.println(names); // => []
+        /*
+          Nota:
+          En este caso, como hemos eliminado los elementos 
+          de 'countries' del set 'names' con 'removeAll' 
+          solo quedaron sus elementos comunes "Luis", 
+          "Pareja" y "Agente-707". Entonces si hacemos 
+          retainAll estos elementos se eliminaran y quedarían
+          solo los de countries, los cuales fueron eliminados
+          anteriormente, por lo tanto el set 'names' quedara vacío.
+        */
+
+        // Volvamos a añadir todos lo elementos de 'countries' a 'names' para ver mejor como funciona 'retainAll'
+        
+        names.add("Luis");
+        names.add("Pareja");
+        names.add("Agente-707");
+        names.addAll(countries);
+        System.out.println(names); // 'names' vuelve a tener todos sus elementos
+
+        names.retainAll(countries); // Aplicamos retainAll
+        System.out.println(names); // => Los elementos comunes de 'names' son eliminados y quedan solo los de 'countries'
 
             
 
