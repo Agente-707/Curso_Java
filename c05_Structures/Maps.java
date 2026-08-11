@@ -63,12 +63,12 @@ public class Maps {
 
         System.out.println(names.remove("Luis")); // le pasamos solo la llave "Luis" y lo elimina junto con su valor
         System.out.println(names.remove("Agente-707"));
-        System.out.println(names) // => solo le queda un elemento
+        System.out.println(names); // => solo le queda un elemento
 
             
         // Limpiar HashMap
         names.clear(); // Elimina todos los elementos del map
-        System.out.println(names) // => {}
+        System.out.println(names); // => {}
 
             
         // Modificación de elementos 
@@ -91,7 +91,7 @@ public class Maps {
         System.out.println(names); // "Agente-707" no existe en 'names' => no ocurre ninguna modificación
 
         // putIfAbsent
-        names.putIfAbsent("Agente-707", "agente-707@gmail.com") // Lo añade solo si no existe dentro del map
+        names.putIfAbsent("Agente-707", "agente-707@gmail.com"); // Lo añade solo si no existe dentro del map
         System.out.println(names);
 
 
