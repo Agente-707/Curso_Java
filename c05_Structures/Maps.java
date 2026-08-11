@@ -57,6 +57,14 @@ public class Maps {
         System.out.println(names.containsValue("luis@gmail.com")); // => true
         System.out.println(names.containsValue("holaaaa")); // => false
 
+        
+        // Eliminar elementos 'remove'
+        // Recibe la llave del elemento que queremos eliminar
+
+        System.out.println(names.remove("Luis")); // le pasamos solo la llave "Luis" y lo elimina junto con su valor
+        System.out.println(names.remove("Agente-707"));
+        System.out.println(names) // => solo le queda un elemento
+
 
     }
 }
