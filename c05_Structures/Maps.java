@@ -65,6 +65,10 @@ public class Maps {
         System.out.println(names.remove("Agente-707"));
         System.out.println(names) // => solo le queda un elemento
 
+            
+        // Limpiar HashMap
+        names.clear(); // Elimina todos los elementos del map
+        System.out.println(names) // => {}
 
     }
 }
