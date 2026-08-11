@@ -70,5 +70,33 @@ public class Maps {
         names.clear(); // Elimina todos los elementos del map
         System.out.println(names) // => {}
 
+            
+        // Modificación de elementos 
+        
+        names.put("Luis", "luis@gmail.com"); // Agregamos un elemento
+        System.out.println(names); 
+
+        names.put("Luis", "luispareja@gmail.com"); // Agregamos otro elemento con la misma llave pero con diferente valor
+        System.out.println(names); // => el valor de nuestro primer elemento cambia "luis@gmail.com" => "luispareja@gmail.com"
+        /*
+        Nota:
+        Si hacemos un put de una clave
+        que ya existe en nuestro map y le
+        cambiamos el valor, el primer valor
+        de nuestro elemento anterior cambiara. 
+        */
+        
+        // replace
+        names.replace("Agente-707", "agente-707@gmail.com"); // Reemplaza el valor si su llave existe
+        System.out.println(names); // "Agente-707" no existe en 'names' => no ocurre ninguna modificación
+
+        // putIfAbsent
+        names.putIfAbsent("Agente-707", "agente-707@gmail.com") // Lo añade solo si no existe dentro del map
+        System.out.println(names);
+
+        
+
+        
+
     }
 }
