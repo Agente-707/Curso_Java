@@ -59,6 +59,10 @@ public class StructuresExercises{
 
     names.add("Pedro");
     names.add("Andres");
+
+
+    // 6. Añade un nuevo valor repetido y otro sin repetir y otro sin repetir al HashSet.
+
     
     
   }
