@@ -1,5 +1,9 @@
 package c06_Loops;
 
+import java.util.HashSet;
+import java.util.Map;
+import java.util.HashMap;
+
 public class Loops {
     public static void main(String[] args){
 
@@ -54,6 +58,49 @@ public class Loops {
             System.out.println(names[ind]); // => Imprime cada elemento del array (índice menor que el tamaño)
         }
 
-        
+
+        // for-each
+
+        for(String name: names){ // Recorre cada elemento de 'names' sin usar índices
+            System.out.println(name);
+        }
+
+        // for each con sets
+        HashSet<Integer> numbers = new HashSet<>();
+        numbers.add(1);
+        numbers.add(2);
+        numbers.add(3);
+        numbers.add(4);
+        numbers.add(5);
+
+        for(Integer number: numbers){ 
+            System.out.println(number);
+        }
+
+        /*
+        Nota:
+        Los sets son un tipo de 
+        estructuras las cuales no
+        manejan índices, osea no
+        podemos imprimir sus elementos
+        usando 'for', pero con 'for each'
+        podemos imprimir cada elemento
+        sin necesidad de acceder a ellor
+        por medio de un índice.
+        */
+
+        // for each con maps
+        HashMap<String,String> emails = new HashMap<>();
+        emails.put("Luis", "Luis@gmail.com");
+        emails.put("Pareja", "pareja@gmail.com");
+        emails.put("Agente-707", "Agente-707@gmail.com");
+
+        for (Map.Entry<String, String> email: emails.entrySet()){
+            System.out.println(email.getKey()); // => Imprime todas las llaves de los elementos
+            System.out.println(email.getValue()); // => Imprime todas los valores de los elementos
+        }
+
+
+
     }
 }
