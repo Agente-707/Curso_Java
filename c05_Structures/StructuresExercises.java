@@ -2,6 +2,7 @@ package c05_Structures;
 
 import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.HashMap;
 
 public class StructuresExercises{
   public static void main(String[] args){
@@ -54,6 +55,7 @@ public class StructuresExercises{
 
 
     // 5. Crea un HashSet con 2 valores diferentes.
+    // Solución:
 
     HashSet<String> names = new HashSet<>();
 
@@ -61,15 +63,64 @@ public class StructuresExercises{
     names.add("Andres");
 
 
-    // 6. Añade un nuevo valor repetido y otro sin repetir y otro sin repetir al HashSet.
+    // 6. Añade un nuevo valor repetido y otro sin repetir al HashSet.
+    // Solución:
+
+    names.add("Pedro"); // Repetido
+    names.add("Anderson"); // Sin repetir
+    System.out.println(names);
+
 
     // 7. Elimina uno de los elementos del HashSet.
+    // Solución:
+
+    names.remove("Andres");
+    System.out.println(names);
+
 
     // 8. Crea un HashMap donde la clave sea un nombre y el valor el número de teléfono. Añade tres contactos.
+    // Solución:
+
+    HashMap<String, Integer> numeros = new HashMap<>();
+
+    numeros.put("Pedro", 123456789);
+    numeros.put("Anderson", 231432315);
+    numeros.put("Andres",123924591);
+    System.out.println(numeros);
+
 
     // 9. Modifica uno de los contactos y elimina otro.
+    // Solución:
+
+    numeros.put("Pedro", 124920532);
+    numeros.remove("Anderson");
+    System.out.println(numeros);
+
 
     // 10. Dado un Array, transfórmalo a un ArrayList, a continuación en un HashSet, y finalmente en un HashMap con clave y valor iguales.
-    
+    //solución:
+
+    int[] MyNumbers = {12, 15, 10, 9, 12, 20}; 
+
+    // de Array a ArrayList
+    ArrayList<Integer> MyNumberList = new ArrayList<>();
+
+    for(int i : MyNumbers){
+      MyNumberList.add(i);
+    }
+
+    System.out.println(MyNumberList);
+
+    // de ArrayList a HashSet
+    HashSet<Integer> MyNumberSet = new HashSet<>(MyNumberList);
+    System.out.println(MyNumberSet);
+
+    // de HashSet a HashMap
+    HashMap<Integer, Integer> MyNumberMap = new HashMap<>();
+    for(int i: MyNumberSet){
+      MyNumberMap.put(i, i);
+    }
+    System.out.println(MyNumberMap);
+
   }
 }
