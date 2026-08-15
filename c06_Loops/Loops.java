@@ -32,6 +32,28 @@ public class Loops {
         // ind = 5   => "Hola mundo!"
         // El bucle termina
 
+        // Bucle en reversa
+        for(int ind = 5; ind >= 0; ind--){
+            System.out.println("Hola mundo!"); // Imprime "Hola mundo!" 6 veces
+        }
+
+        // El indice va disminuyendo de uno en uno en cada vuelta hasta ser cero
+        // ind = 5   => "Hola mundo!"
+        // ind = 4   => "Hola mundo!"
+        // ind = 3   => "Hola mundo!"
+        // ind = 2   => "Hola mundo!"
+        // ind = 1   => "Hola mundo!"
+        // ind = 0   => "Hola mundo!"
+        // El bucle termina
+
+        
+        // Aplicacion del bucle for en Arrays
+        String[] names = {"Luis", "Pareja", "Agente-707", "Luis@gmail.com"};
+
+        for(int ind = 0; ind < names.length; ind++){
+            System.out.println(names[ind]); // => Imprime cada elemento del array (índice menor que el tamaño)
+        }
+
         
     }
 }
