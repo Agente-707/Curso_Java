@@ -13,6 +13,8 @@ public class StructuresExercises{
     para practicar
     */
 
+    // Ejercicios de Array:
+    
     // 1. Crea un Array de 5 elementos e imprime su longitud.
     // Solución:
 
@@ -29,8 +31,10 @@ public class StructuresExercises{
     MyElements[3] = 10;
 
     System.out.println(MyElements[3]); // Despues de modificarlo
-    
 
+    
+    // Ejercicios de ArrayList:
+    
     // 3. Crea un ArrayList vacía.
     // Solución:
 
@@ -53,6 +57,8 @@ public class StructuresExercises{
 
     System.out.println(MyArrayList);
 
+
+    // Ejercicios de HashSet:
 
     // 5. Crea un HashSet con 2 valores diferentes.
     // Solución:
@@ -78,6 +84,8 @@ public class StructuresExercises{
     System.out.println(names);
 
 
+    // Ejercicios de HashMap:
+    
     // 8. Crea un HashMap donde la clave sea un nombre y el valor el número de teléfono. Añade tres contactos.
     // Solución:
 
@@ -96,6 +104,8 @@ public class StructuresExercises{
     numeros.remove("Anderson");
     System.out.println(numeros);
 
+
+    // Ejercicios tryhard:
 
     // 10. Dado un Array, transfórmalo a un ArrayList, a continuación en un HashSet, y finalmente en un HashMap con clave y valor iguales.
     //solución:
