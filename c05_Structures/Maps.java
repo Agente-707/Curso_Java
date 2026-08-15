@@ -4,6 +4,12 @@ import java.util.HashMap;
 
 public class Maps {
     public static void main(String[] args) {
+        /*
+        Los maps son un tipo de estructura
+        que almacenan elementos que cuentan
+        con una llave (key) y un valor (value)
+        */
+        
 
         // Declaración y creación
         HashMap<String, String> names = new HashMap<>(); // Estructura de los maps HashMap<clave: String, valor: String> 
@@ -17,7 +23,7 @@ public class Maps {
 
 
         // Añadir elementos 'put'
-        // Para añadir nuevos elementos al map con 'put'
+        // Para añadir nuevos elementos al map usamos 'put'
         names.put("Luis", "luis@gmail.com"); // llave: "Luis", valor: "luis@gmail.com" 
         names.put("Pareja", "pareja@gmail.com");
         names.put("Agente-707", "Agente-707@gmail.com");
