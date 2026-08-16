@@ -66,6 +66,17 @@ public class LoopsExercises{
     for(index=0; index<numbers.length; index++){
       System.out.println(numbers[index]); 
     }
+
+    
+    // 6. Usa un for-each para recorrer un HashSet y un HashMap.
+
+    // 7. Imprime los números del 10 al 1 (descendiente) con un bucle for.
+
+    // 8. Usa continue para saltar los múltiplos de 3 del 1 al 20.
+
+    // 9. Usa break para un bucle cuando encuentres un número negativo en un Array.
+
+    // 10. Crea un programa que calcule el factorial de un número dado.
     
   }
 }
