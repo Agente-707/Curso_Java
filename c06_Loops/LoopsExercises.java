@@ -140,8 +140,6 @@ public class LoopsExercises{
     }
 
     System.out.println(String.format("El factorial de %d es: %d", x, fact));
-
-
     
   }
 }
