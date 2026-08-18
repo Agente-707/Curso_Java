@@ -22,6 +22,16 @@ public class ClassesExercises{
     var estudiante = new Student(61);
     estudiante.SiAprobo();
 
+    // 6. Crea una clase BankAccount con atributo balance y un método deposit() que sume el saldo.
+
+    // 7. Crea una clase Rectangle con métodos para calcular el área y el perímetro.
+
+    // 8. Crea una clase Worker que reciba nombre y salario y un método para mostrar su salario.
+
+    // 9. Crea varios objetos Person y guardalos en una ArrayList.
+
+    // 10. Crea una clase Product y un método que aplique un descuento sobre su precio.
+
     
   }
 }
