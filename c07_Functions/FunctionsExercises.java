@@ -40,6 +40,17 @@ public class FunctionsExercises{
     int x;
     x = 4;
     parImpar(x);
+
+
+    // 6. Crea una función que reciba una edad y retorne 'true' si es mayor de edad y 'false' en el caso contrario.
+
+    // 7. Implementa una función que reciba una cadena y retorne su longitud.
+
+    // 8. Crea una función que reciba un Array de enteros, calcula su media y lo retorna.
+
+    // 9. Escriba una función que reciaba un número y retorna su factorial.
+
+    // 10. Crea una función que reciba un ArrayList<String> y lo recorra mostrando cada elemento.
     
   }
 
