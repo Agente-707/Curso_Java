@@ -4,6 +4,9 @@ public class ClassesExercises{
   public static void main(String[] args){
 
     // 1. Crea una clase Book con atributos title y author. Crea un objeto y muestra sus datos.
+    
+    var libro = new Book("Franz Kafka", "Metamorfosis");
+    libro.MostrarDatos();
 
     // 2. Crea una clase Dog con un método bark() que imprima su sonido.
 
