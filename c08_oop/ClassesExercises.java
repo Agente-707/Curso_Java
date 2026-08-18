@@ -1,5 +1,7 @@
 package c08_oop;
 
+import java.util.ArrayList;
+
 public class ClassesExercises{
   public static void main(String[] args){
 
@@ -23,14 +25,35 @@ public class ClassesExercises{
     estudiante.SiAprobo();
 
     // 6. Crea una clase BankAccount con atributo balance y un método deposit() que sume el saldo.
+    var banco = new BankAccount(20);
+    banco.deposit();
 
     // 7. Crea una clase Rectangle con métodos para calcular el área y el perímetro.
+    var rect = new Rectangle(3, 4);
+    rect.perímetro();
+    rect.área();
 
     // 8. Crea una clase Worker que reciba nombre y salario y un método para mostrar su salario.
+    var trabajador = new Worker("Pedro", 120);
+    trabajador.MostrarSalario();
 
     // 9. Crea varios objetos Person y guardalos en una ArrayList.
+    ArrayList<Person> personas = new ArrayList<>();
+
+    var persona1 = new Person("Luis", 19);
+    var persona2 = new Person("Alex", 21);
+    var persona3 = new Person("Ben", 23);
+    var persona4 = new Person("Dennis", 18);
+
+    personas.add(persona1);
+    personas.add(persona2);
+    personas.add(persona3);
+    personas.add(persona4);
 
     // 10. Crea una clase Product y un método que aplique un descuento sobre su precio.
+
+    var producto = new Product(55);
+    producto.descuento();
 
     
   }
