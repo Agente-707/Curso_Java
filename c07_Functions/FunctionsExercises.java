@@ -1,5 +1,8 @@
 package c07_Functions;
 
+import java.util.Arrays;
+import java.util.ArrayList;
+
 public class FunctionsExercises{
   public static void main (String[] args){
 
@@ -15,8 +18,7 @@ public class FunctionsExercises{
 
     // 2. Escribe una función que reciba un nombre como parámetro y salude a esa persona.
 
-    String name;
-    name = "Agente-707";
+    String name = "Agente-707";
     saludo(name);
 
 
@@ -30,28 +32,48 @@ public class FunctionsExercises{
 
     // 4. Crea una función que calcule el cuadrado de un número (n x n).
 
-    int n;
-    n = 5;
+    int n = 5;
     cuadrado(n);
 
 
     // 5. Escribe una función que reciba un número y diga si es par o impar.
 
-    int x;
-    x = 4;
+    int x = 4;
     parImpar(x);
 
 
     // 6. Crea una función que reciba una edad y retorne 'true' si es mayor de edad y 'false' en el caso contrario.
 
+    boolean esMayorDeEdad = mayorDeEdad(19);
+    System.out.println(esMayorDeEdad);
+
+
     // 7. Implementa una función que reciba una cadena y retorne su longitud.
+
+    String frase = "Ya no somos los de antes, somos lo de ahora en adelante";
+    int lon = longitud(frase);
+    System.out.println(lon);
+
 
     // 8. Crea una función que reciba un Array de enteros, calcula su media y lo retorna.
 
-    // 9. Escriba una función que reciaba un número y retorna su factorial.
+    int[] numbers = {12, 34, 10, 23, 54, 29, 40, 29};
+    double y = media(numbers);
+    System.out.println(y);
+
+
+    // 9. Escriba una función que reciba un número y retorna su factorial.
+
+    int number = 5;
+    int fact = factorial(number);
+    System.out.println(fact);
+
 
     // 10. Crea una función que reciba un ArrayList<String> y lo recorra mostrando cada elemento.
-    
+
+    var empresas = new ArrayList<>(Arrays.asList("Apple", "Samsung", "Microsoft", "Amazon", "Alicorp"));
+    arraylist(empresas);
+
   }
 
   // 1. Solución:
@@ -87,5 +109,53 @@ public class FunctionsExercises{
     }
   }
 
+  // 6. Solución:
+  public static boolean mayorDeEdad(int edad){
+    if(edad>=18){
+      System.out.println("El usuario es mayor de edad.");
+      return true;
+    }
+
+    System.out.println("El usuario es menor de edad.");
+    return false;
+    
+  }
+
+  // 7. Solución:
+  public static int longitud(String frase){
+    return frase.length();
+  }
+
+  // 8. Solución:
+  public static double media(int[] numbers){
+    double media;
+    int suma=0;
+
+    for(int i=0;i<numbers.length;i++){
+      suma = suma + numbers[i];
+    }
+
+    media = suma / numbers.length;
+
+    return media;
+  }
+
+  // 9. Solución:
+  public static int factorial(int number){
+    int fact = 1;
+
+    for(int i=1;i<=number;i++){
+      fact = fact * i;
+    }
+
+    return fact;
+  }
+
+  // 10. Solución:
+  public static void arraylist(ArrayList<String> numeros){ 
+    for (String num: numeros){
+      System.out.println(num);
+    }
+  } 
 
 }
