@@ -1,5 +1,6 @@
 package c08_oop;
 
+// Ejercicio 6: Solución
 public class BankAccount{
   int balance;
 
