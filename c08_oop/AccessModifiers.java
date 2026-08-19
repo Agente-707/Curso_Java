@@ -31,13 +31,15 @@ public class AccessModifiers {
         - (default)
         */
 
-        var otherPerson = new OtherPerson("Luis", 19, "123456789A");
+        var otherPerson = new OtherPerson("Luis", 19, "123456789A"); // Si la edad es negativa se modificara a cero
 
         otherPerson.sayHello();
 
         otherPerson.name = "Luis Pareja"; // Podemos modificar el atributo protegido 'name' 
         System.out.println(otherPerson.name);
 
+        //System.out.println(otherPerson.id); Error: No podemos acceder a un atributo privado
+        
 
         /*
         - getters:
@@ -48,6 +50,11 @@ public class AccessModifiers {
         Es un método que recibe un parametro
         y asigna un nuevo valor a un elemento privado.
         */
+
+        System.out.println(otherPerson.getId()); // Accedemos al atributo privado 'id' usando getter
+
+        otherPerson.setAge(20); // Modificamos la edad con el setter
+        System.out.println(otherPerson.getAge()); // Accedemos a 'age' usando getter
 
         
     }
