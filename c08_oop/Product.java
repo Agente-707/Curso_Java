@@ -1,5 +1,6 @@
 package c08_oop;
 
+// Ejercicio 10: Solución
 public class Product{
     double precio;
 
