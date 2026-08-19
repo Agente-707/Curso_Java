@@ -1,5 +1,6 @@
 package c08_oop;
 
+// Ejercicio 5: Solución
 public class Student{
     int score;
 
