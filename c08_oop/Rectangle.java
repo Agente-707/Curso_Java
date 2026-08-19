@@ -1,5 +1,6 @@
 package c08_oop;
 
+// Ejercicio 7: Solución
 public class Rectangle{
     int base, altura;
 
