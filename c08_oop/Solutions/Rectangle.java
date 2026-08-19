@@ -1,4 +1,4 @@
-package c08_oop;
+package c08_oop.Solutions;
 
 // Ejercicio 7: Solución
 public class Rectangle{

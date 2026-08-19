@@ -1,4 +1,4 @@
-package c08_oop;
+package c08_oop.Solutions;
 
 // Ejercicio 6: Solución
 public class BankAccount{

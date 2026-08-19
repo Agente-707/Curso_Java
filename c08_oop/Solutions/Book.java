@@ -1,4 +1,4 @@
-package c08_oop;
+package c08_oop.Solutions;
 
 // Ejercicio 1: Solución
 public class Book {

@@ -2,6 +2,15 @@ package c08_oop;
 
 import java.util.ArrayList;
 
+import c08_oop.Solutions.BankAccount;
+import c08_oop.Solutions.Book;
+import c08_oop.Solutions.Car;
+import c08_oop.Solutions.Dog;
+import c08_oop.Solutions.Product;
+import c08_oop.Solutions.Rectangle;
+import c08_oop.Solutions.Student;
+import c08_oop.Solutions.Worker;
+
 public class ClassesExercises{
   public static void main(String[] args){
 

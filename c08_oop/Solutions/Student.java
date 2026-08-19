@@ -1,4 +1,4 @@
-package c08_oop;
+package c08_oop.Solutions;
 
 // Ejercicio 5: Solución
 public class Student{
