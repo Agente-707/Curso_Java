@@ -39,10 +39,15 @@ public class AccessModifiers {
         System.out.println(otherPerson.name);
 
 
-
-        // getters
-        // setters
-
+        /*
+        - getters:
+        Son métodos los cuales retornan 
+        el valor de un elemento privado.
+        
+        - setters:
+        Es un método que recibe un parametro
+        y asigna un nuevo valor a un elemento privado.
+        */
 
         
     }
