@@ -1,5 +1,6 @@
 package c08_oop;
 
+// Ejercicio 8: Solución
 public class Worker{
     String nombre;
     double salario;
