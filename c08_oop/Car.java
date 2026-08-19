@@ -1,6 +1,6 @@
 package c08_oop;
 
-// Ejercicio 3: Solución
+// Ejercicio 4: Solución
 public class Car{
     String brand;
     String model;
