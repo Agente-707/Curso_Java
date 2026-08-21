@@ -1,5 +1,6 @@
 package c08_oop.AccesModifiersExercises;
 
+// Ejercicio 1: Solución
 public class Person2 {
     private String name;
     private int age;
