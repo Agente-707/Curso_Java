@@ -1,5 +1,10 @@
 package c08_oop;
 
+import c08_oop.InheritanceExercises;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class InheritanceExercises {
     public static void main(String[] args){
 
@@ -60,13 +65,51 @@ public class InheritanceExercises {
 
         // 6. Crea una clase Bird con el método fly(). Luego crea Eagle que sobre escriba fly() pero también llame al método original con super.fly().
 
+        var ave = new Bird();
+        var aguila = new Eagle();
+
+        ave.fly();
+        aguila.fly();
+
         // 7. Haz una clase Device con un constructor que imprima “Device created”. Luego crea Phone que herede de Device y en su constructor imprima “Phone ready”.
 
+        var telefono = new Phone();
+
+        
         // 8. Account tiene un saldo y métodos para deposit() y withdraw(). SavingsAccount hereda y agrega un método addInterest().
+
+        var cuenta = new SavingsAccount();
+        cuenta.balance = 120;
+        cuenta.interestRate = 50;
+        cuenta.deposit(20);
+        cuenta.withDraw(30);
+
+        cuenta.addInterest();
+
 
         // 9. Crea una clase Vehicle y tres subclases: Car, Bike y Truck, cada una con un método describe() sobrescrito.
 
+        var carro = new Car2();
+        var bici = new Bike();
+        var camion = new Truck();
+
+        carro.describe();
+        bici.describe();
+        camion.describe();
+
+
         // 10. Crea un ArrayList<Animal> que contenga instancias de Dog, Cat y Bird. Recorre la lista y llama a makeSound().
+
+        List<Animal> animales = new ArrayList<>();
+        animales.add(new Dog());
+        animales.add(new Cat());
+        animales.add(new Bird2());
+
+        for(Animal animal:animales){
+            animal.makeSound();
+        }
+
+
     }
 
     // Ejercicio 1: Solución
@@ -74,6 +117,8 @@ public class InheritanceExercises {
         public void move(){
             System.out.println("El vehículo está en movimiento");
         }
+
+        public void describe(){}
     }
 
     public static class Car extends Vehicle{
@@ -123,9 +168,15 @@ public class InheritanceExercises {
 
     }
 
+    public static class Bird2 extends Animal{
+        @Override
+        public void makeSound(){
+            System.out.println("Este animal hace Pio Pio");
+        }
+    }
+
 
     // Ejercicio 4: Solución
-
     public static class Employee{
         String name;
         double salary;
@@ -135,12 +186,11 @@ public class InheritanceExercises {
         String department;
 
         public void información(){
-            System.out.println("El empleado " + name + " es manager del departamento " + department + " y tiene un salario de " + salary + "$");
+            System.out.println("El empleado " + name + " es manager del departamento " + department + " y tiene un salario de $" + salary );
         }
     }
 
     // Ejercicio 5: Solución
-
     public abstract static class Shape{
         public abstract double calculateArea(); // Método abstrato: El contenido solo se implementa desde las subclases
     }
@@ -174,6 +224,89 @@ public class InheritanceExercises {
             return width * height;
         }
     }
+
+    // Ejercicio 6: Solución
+    public static class Bird{
+        public void fly(){
+            System.out.println("El ave está volando");
+        }
+    }
+
+    public static class Eagle extends Bird{
+        @Override
+        public void fly(){
+            super.fly();
+            System.out.println("Esa ave es un águila");
+        }
+    }
+
+    // Ejercicio 7: Solución
+    public static class Device{
+        public Device(){
+            System.out.println("Device created");
+        }
+    }
+
+    public static class Phone extends Device{
+        public Phone(){
+            System.out.println("Phone ready");
+        }
+    }
+
+    // Ejercicio 8: Solución
+    public static class Account{
+        double balance;
+
+        public void deposit(double amount){
+            balance = balance + amount;
+            System.out.println("Balance = $" + balance);
+        }
+
+        public void withDraw(double amount){
+            balance = balance - amount;
+            System.out.println("Balance = " + balance);
+        }
+    }
+
+    public static class SavingsAccount extends Account{
+        double interestRate;
+
+        public void addInterest(){
+            double interest = balance * interestRate;
+            balance = balance + interest;
+            System.out.println("Interés agregado: $" + interest); 
+        }
+    }
+
+    // Ejercicio 9: Solución
+    public static class Car2 extends Vehicle{
+
+        @Override
+        public void describe(){
+            System.out.println("El auto es un medio de transporte que funciona con combustible");
+        }
+
+    }
+
+    public static class Bike extends Vehicle{
+        @Override
+        public void describe(){
+            System.out.println("La bicicleta es una medio de transporte ligero que funciona con pedales");
+        }
+    }
+
+    public static class Truck extends Vehicle{
+        @Override
+        public void describe(){
+            System.out.println("El camión es un vehículo de carga bastante pesado");
+        }
+    }
+
+    // Ejercicio 10: Solución
+
+
+
+    
 
 
 
