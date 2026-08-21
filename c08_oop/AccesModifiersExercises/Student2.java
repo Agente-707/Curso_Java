@@ -1,5 +1,6 @@
 package c08_oop.AccesModifiersExercises;
 
+// Ejercicio 9: Solución
 public class Student2 {
     private int grade;
 
