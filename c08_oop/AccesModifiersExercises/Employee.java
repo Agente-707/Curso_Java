@@ -1,5 +1,6 @@
 package c08_oop.AccesModifiersExercises;
 
+// Ejercicio 7: Solución
 public class Employee {
     private double salary;
 
