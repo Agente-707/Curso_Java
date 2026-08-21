@@ -1,5 +1,6 @@
 package c08_oop.AccesModifiersExercises;
 
+// Ejercicio 6: Solución
 public class User {
     private String username;
     private String password;
