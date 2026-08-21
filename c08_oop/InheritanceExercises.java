@@ -58,9 +58,15 @@ public class InheritanceExercises {
         System.out.println(areaCirculo);
         System.out.println(areaRectangulo);
 
+        // 6. Crea una clase Bird con el método fly(). Luego crea Eagle que sobre escriba fly() pero también llame al método original con super.fly().
 
+        // 7. Haz una clase Device con un constructor que imprima “Device created”. Luego crea Phone que herede de Device y en su constructor imprima “Phone ready”.
 
+        // 8. Account tiene un saldo y métodos para deposit() y withdraw(). SavingsAccount hereda y agrega un método addInterest().
 
+        // 9. Crea una clase Vehicle y tres subclases: Car, Bike y Truck, cada una con un método describe() sobrescrito.
+
+        // 10. Crea un ArrayList<Animal> que contenga instancias de Dog, Cat y Bird. Recorre la lista y llama a makeSound().
     }
 
     // Ejercicio 1: Solución
