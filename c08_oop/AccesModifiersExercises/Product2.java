@@ -1,5 +1,6 @@
 package c08_oop.AccesModifiersExercises;
 
+// Ejercicio 2: Solución
 public class Product2 {
     private double price;
 
