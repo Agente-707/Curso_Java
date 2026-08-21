@@ -1,5 +1,6 @@
 package c08_oop.AccesModifiersExercises;
 
+// Ejercicio 10: Solución
 public class Car2 {
     private int speed;
 
