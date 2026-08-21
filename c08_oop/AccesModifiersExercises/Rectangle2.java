@@ -1,5 +1,6 @@
 package c08_oop.AccesModifiersExercises;
 
+// Ejercicio 8: Solución
 public class Rectangle2 {
     private int width;
     private int height;
