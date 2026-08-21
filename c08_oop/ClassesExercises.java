@@ -14,6 +14,11 @@ import c08_oop.Solutions.Worker;
 public class ClassesExercises{
   public static void main(String[] args){
 
+    /*
+    Algunos ejercicios de clases
+    en POO
+    */
+
     // 1. Crea una clase Book con atributos title y author. Crea un objeto y muestra sus datos.
     
     var libro = new Book("Franz Kafka", "Metamorfosis");
