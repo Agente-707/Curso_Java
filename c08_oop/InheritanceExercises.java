@@ -99,6 +99,7 @@ public class InheritanceExercises {
 
 
         // 10. Crea un ArrayList<Animal> que contenga instancias de Dog, Cat y Bird. Recorre la lista y llama a makeSound().
+         // Ejercicio 10: Solución
 
         List<Animal> animales = new ArrayList<>();
         animales.add(new Dog());
@@ -302,7 +303,7 @@ public class InheritanceExercises {
         }
     }
 
-    // Ejercicio 10: Solución
+   
 
 
 
