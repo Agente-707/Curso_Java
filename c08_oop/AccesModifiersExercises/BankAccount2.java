@@ -1,5 +1,6 @@
 package c08_oop.AccesModifiersExercises;
 
+// Ejercicio 3: Solución
 public class BankAccount2 {
     private double balance;
 
