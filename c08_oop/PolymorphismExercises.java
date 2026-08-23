@@ -38,9 +38,32 @@ public class PolymorphismExercises{
 
           // 3. Crea una clase Printer con varios métodos print() sobrecargados que acepten diferentes tipos de parámetros (String, int, double). Llama a cada uno desde main.
 
+          var imprimir = new Printer();
+
+          imprimir.print(10);
+          imprimir.print("Holaa");
+          imprimir.print(19, "Hola, Java!");
+          
+
           // 4. Crea una clase Greeter con dos métodos greet(): uno que salude con “Hello”, y otro que reciba un nombre y salude con “Hello, [nombre]”.
 
+          var saludar = new Greeter();
+
+          saludar.greet();
+          saludar.greet("Luis");
+
+
           // 5. Crea una clase Vehicle con un método start(). Luego crea Car, Bike y Truck que sobrescriban ese método. Recorre una lista ArrayList<Vehicle> para llamar a start() en cada uno.
+          
+          ArrayList<Vehicle> transportes = new ArrayList<>();
+
+          transportes.add(new Car());
+          transportes.add(new Bike());
+          transportes.add(new Truck());
+
+          for (Vehicle transporte:transportes){
+               transporte.start();
+          }
           
      }
 
@@ -103,7 +126,61 @@ public class PolymorphismExercises{
           public double calcularArea(){
                return(width*height);
           }
-     
+     }
+
+     // Ejercicio 3: Solución
+     public static class Printer{
+          public void print(String frase){
+               System.out.println(frase);
+          }
+
+          public void print(int numero){
+               System.out.println(numero);
+          }
+
+          public void print(int number, String frase){
+               System.out.println("Frase: " + frase);
+               System.out.println("Número: " + number);
+          }
+     }
+
+     // Ejercicio 4: Solución
+     public static class Greeter{
+          public void greet(){
+               System.out.println("Hello");
+          }
+
+          public void greet(String name){
+               System.out.println("Hello, " + name);
+          }
+     }
+
+     // Ejercicio 5: Solución
+     public static class Vehicle{
+          public void start(){
+               System.out.println("Velocidad: ...");
+          }
+     }
+
+     public static class Bike extends Vehicle{
+          @Override
+          public void start(){
+               System.out.println("Velocidad: Medio");
+          }
+     }
+
+     public static class Car extends Vehicle{
+          @Override
+          public void start(){
+               System.out.println("Velocidad: Rapido");
+          }
+     }
+
+     public static class Truck extends Vehicle{
+          @Override
+          public void start(){
+               System.out.println("Velocidad: Lento");
+          }
      }
     
 }
