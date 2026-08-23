@@ -65,7 +65,16 @@ public class PolymorphismExercises{
                transporte.start();
           }
 
+
           // 6. Crea una clase Notification con método send(), y subclases EmailNotification, SMSNotification. Luego crea una función sendNotification(Notification n) que reciba cualquier tipo y lo ejecute.
+
+          var n = new SMSNotification();
+          var m = new EmailNotification();
+          sendNotification(n);
+          sendNotification(m);
+
+
+          
 
           
           
@@ -186,5 +195,32 @@ public class PolymorphismExercises{
                System.out.println("Velocidad: Lento");
           }
      }
+
+     // Ejercicio 6: Solución
+     public static class Notification{
+          public void send(){
+               System.out.println("Ha recibido una notificación de ...");
+          }
+     }
+
+     public static class EmailNotification extends Notification{
+          @Override
+          public void send(){
+               System.out.println("Ha recibido una notificación de Email");
+          }
+     }
+
+     public static class SMSNotification extends Notification{
+          @Override
+          public void send(){
+               System.out.println("Ha recibido una notificación de SMS");
+          }
+     }
+
+     public static void sendNotification(Notification n){
+          n.send();
+     }
+
+
     
 }

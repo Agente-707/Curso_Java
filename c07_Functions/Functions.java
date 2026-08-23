@@ -52,7 +52,7 @@ public class Functions {
     /*
     Nota:
     Las funciones se establecen
-    afuera de la función main
+    fuera de la función main
     */
 
 
