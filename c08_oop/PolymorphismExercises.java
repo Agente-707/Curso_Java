@@ -73,6 +73,8 @@ public class PolymorphismExercises{
           sendNotification(n);
           sendNotification(m);
 
+          // 7. Crea una función showAnimalType(Animal animal) que imprima el tipo de animal. Pasa diferentes subclases (Dog, Cat, Horse) para que cada una imprima su tipo con su propio getType() sobrescrito.
+
 
           
 
