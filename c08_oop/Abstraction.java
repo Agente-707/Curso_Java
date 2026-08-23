@@ -24,12 +24,6 @@ public class Abstraction {
         var gato = new Cat();
         gato.sleep();
         gato.sound();
-
-
-
-        
-
-        
     }
 
     // - Clase abstracta
