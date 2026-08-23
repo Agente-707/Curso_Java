@@ -2,7 +2,7 @@ package c08_oop;
 
 public class Abstraction {
     public static void main(String[] args){
-        
+
         // Abstracción
 
         // - Clase abstracta
@@ -17,6 +17,12 @@ public class Abstraction {
         var gato = new Cat();
         gato.sleep();
 
+        /*
+        Nota:
+        Solo podemos llamar a las subclases
+        que heredan de la clase abstracta
+        */
+
         
     }
 
@@ -24,6 +30,8 @@ public class Abstraction {
 
     public static abstract class Animal{
 
+        
+        // Definimos el método sleep()
         public void sleep(){
             System.out.println("El animal está durmiendo");
         }
