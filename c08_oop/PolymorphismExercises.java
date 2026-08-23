@@ -44,6 +44,7 @@ public class PolymorphismExercises{
           
      }
 
+     // Ejercicio 1: Solución
      public static class Animal{
           public void makeSound(){
                System.out.println("Algún sonido");
@@ -71,6 +72,7 @@ public class PolymorphismExercises{
           }
      }
 
+     // Ejercicio 2: Solución
      public abstract static class Shape{
           public abstract double calcularArea();
      }
