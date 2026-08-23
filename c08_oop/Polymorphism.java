@@ -30,6 +30,7 @@ public class Polymorphism {
     // - Polimorfismo por herencia (sobrescritura)
 
     public static class Animal{
+        // Definimos el método sound()
         public void sound(){
             System.out.println("Algún sonido");
         }
