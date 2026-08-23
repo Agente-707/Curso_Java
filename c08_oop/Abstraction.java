@@ -30,7 +30,18 @@ public class Abstraction {
 
     public static abstract class Animal{
 
-        
+        // Definimos el método abstracto sound()
+        public abstract void sound();
+
+        /*
+        Nota:
+        El método abstracto sound() no tiene
+        una estructura definida al cual 
+        podamos sobrescribir desde una subclase,
+        pero obligatoriamente debemos definirla
+        desde todas las subclases de Animal
+        */
+
         // Definimos el método sleep()
         public void sleep(){
             System.out.println("El animal está durmiendo");
@@ -38,6 +49,11 @@ public class Abstraction {
     }
 
     public static class Dog extends Animal{
+        @Override
+        public void sleep(){
+            System.out.println("El perro está durmiendo");
+        }
+
         
     }
 
