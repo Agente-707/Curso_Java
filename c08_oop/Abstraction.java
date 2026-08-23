@@ -11,17 +11,23 @@ public class Abstraction {
         // var animal = new Animal(); => Error: La clase Animal es abstracta, no se puede instanciar
         // animal.sleep();
 
-        var perro = new Dog();
-        perro.sleep();
-
-        var gato = new Cat();
-        gato.sleep();
-
         /*
         Nota:
         Solo podemos llamar a las subclases
         que heredan de la clase abstracta
         */
+
+        var perro = new Dog();
+        perro.sleep();
+        perro.sound();
+
+        var gato = new Cat();
+        gato.sleep();
+        gato.sound();
+
+
+
+        
 
         
     }
@@ -54,10 +60,62 @@ public class Abstraction {
             System.out.println("El perro está durmiendo");
         }
 
+        @Override
+        public void sound(){
+            System.out.println("Woof");
+        }
         
     }
 
     public static class Cat extends Animal{
+        @Override
+        public void sound(){
+            System.out.println("Meow");
+        }
+    }
+
+    // - Interface
+
+    public interface Flying {
+        void fly(); // Método fly() en la interface
+    }
+
+    /*
+    Nota:
+    Si nosotros queremos implementar el
+    método fly() solo para las subclases
+    Bird y Bad (ya que estos son animales
+    voladores a diferencia de Dog y Cat),
+    debemos utilizar 'interface' e implementarlo
+    a las subclases Bird y Bad.
+    */
+
+    public static class Bird extends Animal implements Flying{ // Implementamos la interface Flying a Bird
+
+        @Override
+        public void sound(){
+            System.out.println("Pio pio");
+        }
+
+        @Override
+        public void fly(){
+            System.out.println("El pajaro vuela");
+        }
+
         
     }
+
+    public static class Bat extends Animal implements Flying{ // Implementamos la interface Flying a Bat
+        @Override
+        public void sound(){
+            System.out.println("Soy batman!");
+        }
+
+        @Override
+        public void fly(){
+            System.out.println("El muerciélago vuela");
+        }
+    }
 }
+
+
