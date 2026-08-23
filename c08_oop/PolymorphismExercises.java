@@ -73,25 +73,59 @@ public class PolymorphismExercises{
           sendNotification(n);
           sendNotification(m);
 
+
           // 7. Crea una función showAnimalType(Animal animal) que imprima el tipo de animal. Pasa diferentes subclases (Dog, Cat, Horse) para que cada una imprima su tipo con su propio getType() sobrescrito.
+
+          var animal = new Dog();
+          var animal2 = new Cat();
+          var animal3 = new Horse();
+
+          showAnimalType(animal);
+          showAnimalType(animal2);
+          showAnimalType(animal3);
+
 
           // 8. Crea una clase Converter con métodos convert(int), convert(double), y convert(String) que devuelvan diferentes formatos de texto.
 
+          var texto = new Converter();
+
+          texto.convert(01101000);
+          texto.convert(01101111);
+          texto.convert(01101100);
+          texto.convert(01100001);
+          texto.convert("Hola");
+          texto.convert(12345.54321);
+
+
           // 9. Crea una clase Product con el método getPrice(). Luego, Book y Electronic deben sobrescribirlo con su propia lógica de descuento. Recorre una lista de Product e imprime el precio final de cada uno.
+
+          ArrayList<Product> productos = new ArrayList<>();
+
+          productos.add(new Book());
+          productos.add(new Electronic());
+
+          for(Product producto:productos){
+               producto.getPrice();
+          }
+
 
           // 10. Crea una clase Character con método attack(). Luego crea subclases Warrior, Archer, Mage con ataques diferentes. En main, crea un array de Character y llama a attack() para cada uno.
 
+          Character[] personajes = {new Warrior(), new Archer(), new Mage()};
+          for(Character personaje:personajes){
+               personaje.attack();
+          }
 
-          
-
-          
-          
      }
 
      // Ejercicio 1: Solución
      public static class Animal{
           public void makeSound(){
                System.out.println("Algún sonido");
+          }
+
+          public void getType(){
+               System.out.println("El animal es un ...");
           }
      }
 
@@ -100,6 +134,11 @@ public class PolymorphismExercises{
           public void makeSound(){
                System.out.println("Woof");
           }
+
+          @Override
+          public void getType(){
+               System.out.println("El animal es un perro");
+          }
      }
 
      public static class Cat extends Animal{
@@ -107,12 +146,24 @@ public class PolymorphismExercises{
           public void makeSound(){
                System.out.println("Meow");
           }
+
+          @Override
+          public void getType(){
+               System.out.println("El animal es un gato");
+          }
      }
 
      public static class Cow extends Animal{
           @Override
           public void makeSound(){
                System.out.println("Muuu");
+          }
+     }
+
+     public static class Horse extends Animal{
+          @Override
+          public void getType(){
+               System.out.println("El animal es un caballo");
           }
      }
 
@@ -229,6 +280,79 @@ public class PolymorphismExercises{
           n.send();
      }
 
+     // Ejercicio 7: Solución
+     public static void showAnimalType(Animal animal){
+          animal.getType();
+     }
 
-    
+     // Ejercicio 8: Solución
+     public static class Converter{
+          public void convert(int texto){
+               System.out.println(texto);
+          }
+          
+          public void convert(double texto){
+               System.out.println(texto);
+          }
+
+          public void convert(String texto){
+               System.out.println(texto);
+          }
+     }
+
+     // Ejercicio 9: Solución
+     public static class Product{
+          public void getPrice(){
+               System.out.println("Aplicando descuento");
+          }
+
+     }
+
+     public static class Book extends Product{
+          @Override
+          public void getPrice(){
+               double price = 40;
+               System.out.println("Precio del libro: " + price);
+               double desc = price - price*0.3;
+               System.out.println("Descuento del 30%: " + desc);
+          }
+     }
+
+     public static class Electronic extends Product{
+          @Override
+          public void getPrice(){
+               double price = 1200;
+               System.out.println("Precio del celular: " + price);
+               double desc = price - price*0.2;
+               System.out.println("Descuento del 20%: " + desc);
+          }
+     }
+
+     // Ejercicio 10: Solución
+     public static class Character{
+          public void attack(){
+               System.out.println("Lanza un ataque");
+          }
+     }
+
+     public static class Warrior extends Character{
+          @Override
+          public void attack(){
+               System.out.println("El guerrero usa su espada, hace +30 de daño");
+          }
+     }
+
+     public static class Archer extends Character{
+          @Override
+          public void attack(){
+               System.out.println("El arquero dispara una flechas, hace +20 de daño");
+          }
+     }
+
+     public static class Mage extends Character{
+          @Override
+          public void attack(){
+               System.out.println("El mago le pregunta a chatGPT como vencer al enemigo, hace -1000 de aura"); //xd
+          }
+     }
 }
