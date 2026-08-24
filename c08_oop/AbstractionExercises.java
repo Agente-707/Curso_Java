@@ -56,6 +56,9 @@ public class AbstractionExercises{
 
             System.out.println(tiempoExtra.calculateSalary());
             System.out.println(tiempoBasico.calculateSalary());
+
+            
+            // 6. Crea una interfaz Movable con el método move(). Haz que las clases Car y Robot implementen ese método con comportamientos diferentes.
       }
 
       // Ejercicio 1: Solución
@@ -210,6 +213,8 @@ public class AbstractionExercises{
                   return 100 - (basicTime*5);
             }
       }
+      
+      // Ejercicio 6: Solución
 
 
 
