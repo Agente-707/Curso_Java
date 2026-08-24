@@ -59,6 +59,26 @@ public class AbstractionExercises{
 
             
             // 6. Crea una interfaz Movable con el método move(). Haz que las clases Car y Robot implementen ese método con comportamientos diferentes.
+
+            var robot = new Robot();
+            var car = new Car();
+
+            car.move();
+            robot.move();
+
+
+            // 7. Crea una clase abstracta Appliance con método turnOn() y turnOff(). Implementa TV y WashingMachine con mensajes diferentes al encender y apagar.
+
+            var lavadora = new WashingMachine();
+            var tv = new TV();
+
+            lavadora.turnOn();
+            lavadora.turnOff();
+
+            tv.turnOn();
+            tv.turnOff();
+
+
       }
 
       // Ejercicio 1: Solución
@@ -215,6 +235,52 @@ public class AbstractionExercises{
       }
       
       // Ejercicio 6: Solución
+      public interface Movable{
+            void move();
+      }
+
+      public static class Car implements Movable{
+            @Override
+            public void move(){
+                  System.out.println("El auto se mueve con sus cuatro llantas");
+            }
+      }
+
+      public static class Robot implements Movable{
+            @Override
+            public void move(){
+                  System.out.println("El robot se mueve con sus articulaciones");
+            }
+      }
+
+      // Ejercicio 7: Solución
+      public static abstract class Appliance{
+            public abstract void turnOn();
+            public abstract void turnOff();
+      }
+
+      public static class TV extends Appliance{
+            public void turnOn(){
+                  System.out.println("La TV se enciende");
+            }
+
+            public void turnOff(){
+                  System.out.println("La TV se apaga");
+            }
+      }
+
+      public static class WashingMachine extends Appliance{
+            public void turnOn(){
+                  System.out.println("La lavadora se enciende");
+            }
+
+            public void turnOff(){
+                  System.out.println("La lavadora se apaga");
+            }
+      }
+
+
+      
 
 
 
