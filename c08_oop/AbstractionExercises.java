@@ -16,8 +16,12 @@ public class AbstractionExercises{
             System.out.println("Área del circulo: " + circulo.calculateArea());
             System.out.println("Área del rectangulo: " + rectangulo.calculateArea());
 
+
+            // 2. Crea una interfaz Playable con el método play(). Luego implementa esa interfaz en dos clases: Guitar y Piano. Cada una debe mostrar un mensaje diferente al ejecutarse.
+
       }
 
+      // Ejercicio 1: Solución
       public static abstract class Shape{
             public abstract double calculateArea();
       }
