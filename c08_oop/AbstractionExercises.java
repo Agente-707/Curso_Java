@@ -31,6 +31,11 @@ public class AbstractionExercises{
 
             // 3. Define una clase abstracta Animal con el método makeSound(). Implementa Dog y Cat para que hagan sonidos distintos. Crea un array de Animal para mostrar polimorfismo.
 
+            Animal[] animales = {new Dog(), new Cat()};
+
+            for(Animal animal:animales){
+                  animal.makeSound();
+            }
             
       }
 
@@ -104,4 +109,21 @@ public class AbstractionExercises{
       }
 
       // Ejercicio 3: Solución
+      public static abstract class Animal{
+            public abstract void makeSound();
+      }
+
+      public static class Dog extends Animal{
+            @Override
+            public void makeSound(){
+                  System.out.println("Woof");
+            }
+      }
+
+      public static class Cat extends Animal{
+            @Override
+            public void makeSound(){
+                  System.out.println("Meow");
+            }
+      }
 }
