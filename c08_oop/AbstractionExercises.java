@@ -47,6 +47,11 @@ public class AbstractionExercises{
             circulo2.draw();
             cuadrado.draw();
             triangulo.draw();
+
+
+            // 5. Crea una clase abstracta Employee con un método calculateSalary(). Implementa FullTimeEmployee y PartTimeEmployee con lógica diferente para calcular el salario.
+
+            
       }
 
       // Ejercicio 1: Solución
@@ -172,5 +177,7 @@ public class AbstractionExercises{
                   System.out.println(" ----- ");
             }
       }
+
+      // Ejercicio 5: Solución
       
 }
