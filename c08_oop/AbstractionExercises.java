@@ -19,6 +19,14 @@ public class AbstractionExercises{
 
             // 2. Crea una interfaz Playable con el método play(). Luego implementa esa interfaz en dos clases: Guitar y Piano. Cada una debe mostrar un mensaje diferente al ejecutarse.
 
+            var guitarra = new Guitar();
+            var piano = new Piano();
+
+            guitarra.instrument();
+            piano.instrument();
+
+            guitarra.play();
+            piano.play();
       }
 
       // Ejercicio 1: Solución
@@ -50,6 +58,43 @@ public class AbstractionExercises{
             @Override
             public double calculateArea(){
                   return width*height;
+            }
+      }
+
+      // Ejercicio 2: Solución
+      public interface Playable{
+            void play();
+      }
+
+      public static class Instrument{
+            public void instrument(){
+                  System.out.println("El instrumento es ...");
+            }
+      }
+
+      public static class Guitar extends Instrument implements Playable{
+
+            @Override
+            public void instrument(){
+                  System.out.println("Este instrumento es una guitarra");
+            }
+
+            @Override
+            public void play(){
+                  System.out.println("Es un instrumento de cuerdas");
+            }
+      }
+
+      public static class Piano extends Instrument implements Playable{
+
+            @Override
+            public void instrument(){
+                  System.out.println("Este instrumento es un piano");
+            }
+
+            @Override
+            public void play(){
+                  System.out.println("Es un instrumento de teclas");
             }
       }
 }
