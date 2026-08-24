@@ -27,6 +27,11 @@ public class AbstractionExercises{
 
             guitarra.play();
             piano.play();
+
+
+            // 3. Define una clase abstracta Animal con el método makeSound(). Implementa Dog y Cat para que hagan sonidos distintos. Crea un array de Animal para mostrar polimorfismo.
+
+            
       }
 
       // Ejercicio 1: Solución
@@ -97,4 +102,6 @@ public class AbstractionExercises{
                   System.out.println("Es un instrumento de teclas");
             }
       }
+
+      // Ejercicio 3: Solución
 }
