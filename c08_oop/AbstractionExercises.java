@@ -81,6 +81,12 @@ public class AbstractionExercises{
             
             // 8. Crea dos interfaces Flyable y Swimmable. Crea una clase Duck que implemente ambas interfaces y muestre cómo puede volar y nadar.
 
+            var pato = new Duck();
+
+            pato.fly();
+            pato.swim();
+
+
             
 
 
@@ -285,6 +291,23 @@ public class AbstractionExercises{
       }
 
       // Ejercicio 8: Solución
+      public interface Flyable{
+            void fly();
+      }
+
+      public interface Swimmable{
+            void swim();
+      }
+
+      public static class Duck implements Flyable, Swimmable{
+            public void fly(){
+                  System.out.println("El pato vuela con sus alas");
+            }
+
+            public void swim(){
+                  System.out.println("El pato nada con sus patas palmeadas");
+            }
+      }
 
 
       
