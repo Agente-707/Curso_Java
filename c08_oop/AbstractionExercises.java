@@ -87,6 +87,9 @@ public class AbstractionExercises{
             pato.swim();
 
 
+            // 9. Crea una clase abstracta Document con el método print(). Luego crea PDFDocument y WordDocument, cada una con su forma de imprimir.
+
+
             
 
 
@@ -308,6 +311,9 @@ public class AbstractionExercises{
                   System.out.println("El pato nada con sus patas palmeadas");
             }
       }
+
+      // Ejercicio 9: Solución
+      
 
 
       
