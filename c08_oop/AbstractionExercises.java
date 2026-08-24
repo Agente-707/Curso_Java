@@ -95,6 +95,9 @@ public class AbstractionExercises{
             documento1.print();
             documento2.print();
 
+
+            // 10. Crea una interfaz Payable con el método pay(). Luego implementa las clases Invoice y EmployeePayment, cada una mostrando un mensaje de pago diferente.
+
             
       }
 
@@ -333,6 +336,8 @@ public class AbstractionExercises{
                   System.out.println("Imprimiendo documento de Word");
             }
       }
+
+      // Ejercicio 10: Solución
       
 
 
