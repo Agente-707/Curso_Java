@@ -36,6 +36,9 @@ public class AbstractionExercises{
             for(Animal animal:animales){
                   animal.makeSound();
             }
+
+
+            // 4. Crea una interfaz Drawable. Implementa las clases Circle, Square, y Triangle que muestren cómo se dibuja cada figura usando draw().
             
       }
 
@@ -126,4 +129,7 @@ public class AbstractionExercises{
                   System.out.println("Meow");
             }
       }
+
+      // Ejercicio 4: Solución
+      
 }
