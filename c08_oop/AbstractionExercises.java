@@ -78,6 +78,11 @@ public class AbstractionExercises{
             tv.turnOn();
             tv.turnOff();
 
+            
+            // 8. Crea dos interfaces Flyable y Swimmable. Crea una clase Duck que implemente ambas interfaces y muestre cómo puede volar y nadar.
+
+            
+
 
       }
 
@@ -278,6 +283,8 @@ public class AbstractionExercises{
                   System.out.println("La lavadora se apaga");
             }
       }
+
+      // Ejercicio 8: Solución
 
 
       
