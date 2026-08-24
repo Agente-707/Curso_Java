@@ -98,6 +98,11 @@ public class AbstractionExercises{
 
             // 10. Crea una interfaz Payable con el método pay(). Luego implementa las clases Invoice y EmployeePayment, cada una mostrando un mensaje de pago diferente.
 
+            var factura = new Invoice();
+            var pagoEmpleado = new EmployeePayment();
+
+            factura.pay();
+            pagoEmpleado.pay();
             
       }
 
@@ -338,7 +343,32 @@ public class AbstractionExercises{
       }
 
       // Ejercicio 10: Solución
-      
+      public interface Payable{
+            void pay();
+      }
+
+      public static class Invoice implements Payable{
+            public void pay(){
+                  System.out.println("Descripción             Cantidad  Precio unidad      Importe");
+                  System.out.println("Casco Bluebird              2,00          28,45         56,90 $");
+                  System.out.println("Maillo Elite                1,00          49,50         49,50 $");
+                  System.out.println("Faro delantero              3,00           9,50         28,50 $");
+                  System.out.println("Bidón isotermo 700mL        2,00           9,75         19,50 $");
+                  System.out.println("Porta-bidón                 1,00           6,95          6,95 $");
+                  System.out.println("Mochila hidratación Climb   2,00          84,95        269,90 $");
+                  System.out.println("Guantes polar XL            1,00          23,95         23,95 $");
+                  System.out.println("                                  SUBTOTAL             355,20 $");
+                  System.out.println("                                  DESCUENTO             17,76 $");
+                  System.out.println("                                   IVA (21.00 %)        74,59 $");
+                  System.out.println("                                   Total               412,03 $");
+            }
+      }
+
+      public static class EmployeePayment implements Payable{
+            public void pay(){
+                  System.out.println("El empleado recibe su cheque de pago.");
+            }
+      }
 
 
       
