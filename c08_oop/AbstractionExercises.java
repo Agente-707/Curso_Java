@@ -89,10 +89,13 @@ public class AbstractionExercises{
 
             // 9. Crea una clase abstracta Document con el método print(). Luego crea PDFDocument y WordDocument, cada una con su forma de imprimir.
 
+            var documento1 = new PDFDocument();
+            var documento2 = new WordDocument();
+
+            documento1.print();
+            documento2.print();
 
             
-
-
       }
 
       // Ejercicio 1: Solución
@@ -313,6 +316,23 @@ public class AbstractionExercises{
       }
 
       // Ejercicio 9: Solución
+      public static abstract class Document{
+            public abstract void print();
+      }
+
+      public static class PDFDocument extends Document{
+            @Override
+            public void print(){
+                  System.out.println("Imprimiendo documento en formato PDF");
+            }
+      }
+
+      public static class WordDocument extends Document{
+            @Override
+            public void print(){
+                  System.out.println("Imprimiendo documento de Word");
+            }
+      }
       
 
 
