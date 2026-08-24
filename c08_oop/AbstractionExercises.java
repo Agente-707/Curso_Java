@@ -51,7 +51,11 @@ public class AbstractionExercises{
 
             // 5. Crea una clase abstracta Employee con un método calculateSalary(). Implementa FullTimeEmployee y PartTimeEmployee con lógica diferente para calcular el salario.
 
-            
+            var tiempoExtra = new FullTimeEmployee(5);
+            var tiempoBasico = new PartTimeEmployee(4);
+
+            System.out.println(tiempoExtra.calculateSalary());
+            System.out.println(tiempoBasico.calculateSalary());
       }
 
       // Ejercicio 1: Solución
@@ -179,5 +183,35 @@ public class AbstractionExercises{
       }
 
       // Ejercicio 5: Solución
-      
+      public static abstract class Employee{
+            public abstract double calculateSalary();
+      }
+
+      public static class FullTimeEmployee extends Employee{
+            double extraTime;
+            public FullTimeEmployee(double extraTime){
+                  this.extraTime = extraTime;
+            }
+
+            @Override
+            public double calculateSalary(){
+                  return 100 + (extraTime*20);
+            }
+      }
+
+      public static class PartTimeEmployee extends Employee{
+            double basicTime;
+            public PartTimeEmployee(double basicTime){
+                  this.basicTime=basicTime;
+            }
+
+            @Override
+            public double calculateSalary(){
+                  return 100 - (basicTime*5);
+            }
+      }
+
+
+
+
 }
