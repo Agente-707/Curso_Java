@@ -40,6 +40,13 @@ public class AbstractionExercises{
 
             // 4. Crea una interfaz Drawable. Implementa las clases Circle, Square, y Triangle que muestren cómo se dibuja cada figura usando draw().
             
+            var circulo2 = new Circle2();
+            var cuadrado = new Square();
+            var triangulo = new Triangle();
+
+            circulo2.draw();
+            cuadrado.draw();
+            triangulo.draw();
       }
 
       // Ejercicio 1: Solución
@@ -131,5 +138,39 @@ public class AbstractionExercises{
       }
 
       // Ejercicio 4: Solución
+      public interface Drawable{
+            void draw();
+      }
+
+      public static class Circle2 implements Drawable{
+            @Override
+            public void draw(){
+                  System.out.println("  --- ");
+                  System.out.println(" /   \\");
+                  System.out.println("|     |");
+                  System.out.println(" \\   /");
+                  System.out.println("  ---  ");
+            }
+      }
+
+      public static class Square implements Drawable{
+            @Override
+            public void draw(){
+                  System.out.println("-----");
+                  System.out.println("|   |");
+                  System.out.println("|   |");
+                  System.out.println("-----");
+            }
+      }
+
+      public static class Triangle implements Drawable{
+            @Override
+            public void draw(){
+                  System.out.println("   /\\   ");
+                  System.out.println("  /  \\  ");
+                  System.out.println(" /    \\ ");
+                  System.out.println(" ----- ");
+            }
+      }
       
 }
