@@ -61,14 +61,18 @@ public class Exceptions {
 
         try {
 
-            var result = 10/0;
+            var result = 10/5;
             System.out.println(result);
 
             var name = "Luis";
-            System.out.println("Name: " + name);
-        } catch(ArithmeticException e){ 
-            System.out.println("Error: " + e);
+            name = null;
+            System.out.println("Name: " + name.toUpperCase()); // Hacemos toUpperCase() a un String 'null'
+        } catch(ArithmeticException e){ // Excepción de la suma
+            System.out.println("Cuidado con dividir algo que no puedes: " + e);
+        } catch(NullPointerException e){ // Excepción del String null
+            System.out.println("Ha ocurrido un null pointer mítico!")
         }
+            
 
         System.out.println("Fin"); // La ejecución del código continúa
 
