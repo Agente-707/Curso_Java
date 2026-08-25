@@ -70,11 +70,29 @@ public class Exceptions {
         } catch(ArithmeticException e){ // Excepción de la suma
             System.out.println("Cuidado con dividir algo que no puedes: " + e);
         } catch(NullPointerException e){ // Excepción del String null
-            System.out.println("Ha ocurrido un null pointer mítico!")
+            System.out.println("Ha ocurrido un null pointer mítico!");
+        } catch(Exception e){ // Excepción por defecto (Captura caulquier tipo de error que no sean los que ya establecimos antes 'ArithmeticException' y 'NullPointerException')
+            System.out.println("Se ha producido un error inesperado");
         }
             
-
         System.out.println("Fin"); // La ejecución del código continúa
+
+
+        // finally
+
+        try { //=> Identifica si hay un error
+            var result = 10/0;
+            System.out.println(result);
+        } catch(ArithmeticException e){ // => Parametro e que guarda la información del error
+            System.out.println("Error: " + e);
+        } finally{ // => Siempre se ejecuta (Sin importar que)
+            System.out.println("Fin del bloque try-catch");
+        }
+
+        System.out.println("Fin");
+
+
+        
 
 
         
