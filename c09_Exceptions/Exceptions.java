@@ -22,7 +22,6 @@ public class Exceptions {
 
         // Manejo de excepciones
 
-
         try {
 
             var result = 10/0;
@@ -35,5 +34,34 @@ public class Exceptions {
         }
 
         System.out.println("Fin"); // La ejecución del código continúa
+
+
+        try {
+            var result = 10/0;
+            System.out.println(result);
+        } catch(ArithmeticException e){ // => Tipo de excepción 'aritmetica'
+            System.out.println("Error: " + e);
+        }
+
+        System.out.println("Fin"); // La ejecución del código continúa
+
+        
+         try {
+            var result = 10/5;  //  Operación sin errores
+            System.out.println(result);
+
+        } catch(Exception e){ 
+            System.out.println("Error: " + e);
+
+            // El código dentro de 'try' no tiene errores, por lo tanto no se imprime el error
+        }
+
+        System.out.println("Fin"); // La ejecución del código continúa
+
+
+        
+
+
+        
     }
 }
