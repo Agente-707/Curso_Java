@@ -110,6 +110,18 @@ public class Exceptions {
 
         System.out.println("Fin");
 
+        // Excepcón personalizada
+
+        // throwExample.checkScore(45); => Error: No puedes lanzar una excepción personalizada que extiende de 'Exception' sin capturarla
+
+        try{
+            throwExample.checkScore(45);
+        } catch (CustomException e){
+            System.out.println("Error revisando la puntuación: " + e.getMessage());
+        }
+
+        System.out.println("Fin");
+
 
         
 
