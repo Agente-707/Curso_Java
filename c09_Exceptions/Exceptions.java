@@ -91,6 +91,23 @@ public class Exceptions {
 
         // throw
 
+        var throwExample = new ThrowExample(); // => Instanciamos la clase ThrowExample
+
+        throwExample.checkAge(19);
+
+        /*
+        Nota:
+        En caso la edad sea menor a 18, la excepción
+        se va a lanzar y el programa se detendra.
+        Para ello podemos usar el 'try catch'
+        */
+
+        try{
+            throwExample.checkAge(15);
+        } catch(IllegalArgumentException e){
+            System.out.println("Error revisando edad: " + e.getMessage()); // Capturamos el error
+        }
+
         System.out.println("Fin");
 
 
