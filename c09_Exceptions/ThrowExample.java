@@ -15,5 +15,13 @@ public class ThrowExample{
             }
       }
 
+      public void checkScore(int score) throws CustomException{
+            if(score<0 || score>100){
+                  throw new CustomException("Mi excepción personalizada"); // Lanzamos la excepción personalizada
+            }else{
+                  System.out.println("Puntuación válida: " + score);
+            }
+      }
+
       
 }
