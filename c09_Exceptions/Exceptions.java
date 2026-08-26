@@ -89,6 +89,8 @@ public class Exceptions {
             System.out.println("Fin del bloque try-catch");
         }
 
+        // throw
+
         System.out.println("Fin");
 
 
