@@ -36,6 +36,7 @@ public class ExceptionExercises{
 
 
           // 3. Crea una variable String nula e intenta imprimir su longitud. Maneja el NullPointerException.
+          // Solución:
 
           String frase = null;
 
