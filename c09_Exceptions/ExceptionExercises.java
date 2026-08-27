@@ -72,16 +72,64 @@ public class ExceptionExercises{
           
           // 6. Usa throw para lanzar un IllegalArgumentException si un número introducido es negativo.
 
+          var lanzar = new Throw();
+
+          lanzar.positiveNumber(10);
+
+          try{
+               lanzar.positiveNumber(-10);
+          } catch(IllegalArgumentException e){
+               System.out.println("Error: " + e);
+          }
+          
+
           // 7. Crea una clase TemperatureChecker que lanza una excepción personalizada si la temperatura es menor a -50 o mayor a 50.
 
+          var temperatura = new TemperatureChecker();
+
+          try{
+               temperatura.checker(100);
+          }catch(CustomException e){
+               System.out.println("Error: " + e.getMessage());
+          }
+
+
           // 8. Crea un programa con varios bloques catch: uno para ArithmeticException, otro para ArrayIndexOutOfBoundsException.
+          // Solución:
+
+          a = 3;
+          b = 5;
+
+          try{
+               System.out.println(a/b);
+               System.out.println(ciudades[5]);
+          } catch(ArithmeticException e){
+               System.out.println("Error: " + e);
+          } catch(ArrayIndexOutOfBoundsException e){
+               System.out.println("Error: " + e);
+          }
+
 
           // 9. Crea una función checkPassword(String pass) que lance una excepción si la contraseña es demasiado corta.
 
-          // 10. Implementa una clase LoginSystem que use una excepción personalizada LoginFailedException si el usuario o contraseña son incorrectos.
-          
+          String clave = "hola";
+          try{
+               checkPassword(clave);
+          } catch (CustomException e){
+               System.out.println("Error: " + e.getMessage());
+          }
 
-       
+
+          // 10. Implementa una clase LoginSystem que use una excepción personalizada LoginFailedException si el usuario o contraseña son incorrectos.
+
+          var persona = new LoginSystem("Luis","xxxalsda1000");
+
+          try{
+               persona.validacion("Luis", "xxxxalsda1000");
+          } catch(CustomException e){
+               System.out.println("Error: " + e.getMessage());
+          }
+
      }
 
      // Ejercicio 4: Solución:
@@ -94,4 +142,60 @@ public class ExceptionExercises{
                return null;
           }
      }
+
+     // Ejercicio 6: Solución:
+     public static class Throw{
+
+          public void positiveNumber(int number){
+               if(number<0){
+                    throw new IllegalArgumentException("El número es negativo");
+               }else{
+                    System.out.println("El número es positivo");
+               }
+          }
+     }
+
+     // Ejercicio 7: Solución:
+     public static class TemperatureChecker{
+
+          public void checker(int temp) throws CustomException{
+               if(temp<-50 || temp>50){
+                    throw new CustomException("La temperatura debe estar entre -50 y 50 celsius");
+               }else{
+                    System.out.println("Temperatura válida: " + temp);
+               }
+          }
+     }
+
+     // Ejercicio 9: Solución:
+     public static void checkPassword(String pass) throws CustomException{
+          if(pass.length() < 5){
+               throw new CustomException("La contraseña es demasiado corta");
+          }else{
+               System.out.println("Contraseña válida: " + pass);
+          }
+     }
+
+     //Ejercicio 10: Solución:
+     public static class LoginSystem{
+          String usuario, contraseña;
+          public LoginSystem(String usuario, String contraseña){
+               this.contraseña = contraseña;
+               this.usuario = usuario;
+          }
+
+          public void validacion(String user, String clave) throws CustomException{
+               if(!user.equals(usuario) || !clave.equals(contraseña)){
+                    System.out.println("Error: LoginFailedException");
+               }else{
+                    System.out.println("Usuario encontrado");
+                    System.out.println("Nombre de usuario: " + user);
+                    System.out.println("Contraseña: " + clave);
+               }
+          }
+     }
+
+
+
+
 }
