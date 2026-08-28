@@ -7,6 +7,10 @@ import c08_oop.Classes;
 import java.util.Scanner; // Importamos el recurso de Scanner
 
 public class Extras {
+
+    static String globalName = "Agente-707"; // Variable global estatica, se define fuera del main
+    
+    
     public static void main(String[] args){
 
         // Extras
@@ -63,6 +67,26 @@ public class Extras {
 
 
         System.out.println("Mi edad es: " + age);
+
+
+        // Scope: variables globales y locales
+
+        /*
+        Nota:
+        Las variables declaradas dentro
+        de un método (name, age, etc) se les
+        conoce como variables locales, y las
+        que son declaradas fuera pero dentro 
+        de la clase (en este caso de la clase
+        Extras) se les conoce como variable 
+        globales
+        */
+
+        test(); // => Llamamos a la función
         
+    }
+
+    public static void test(){
+        System.out.println(globalName); // La función estatica 'test' puede acceder a la varaiable global 'globalName'
     }
 }
