@@ -83,6 +83,19 @@ public class Extras {
         */
 
         test(); // => Llamamos a la función
+
+
+        // static
+
+        /*
+        Cuando definimos una variable
+        o un método como estatico, podemos
+        acceder a ella sin instanciarla
+        (osea sin hacer var prueba = test();), 
+        así como ya vimos con 'globalName' que
+        podemos acceder a ella desde otro método
+        sin tener que declararla dentro de test().
+        */
         
     }
 
