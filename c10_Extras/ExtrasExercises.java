@@ -1,10 +1,13 @@
 package c10_Extras;
 
 import java.util.Scanner;
+import java.util.Random;
 
 public class ExtrasExercises {
 
     static String message = "Inicio del curso :)";
+    static String saludo = "Hola, mundo!";
+    static String username = "Agente-707";
     public static void main(String[] args){
 
         /*
@@ -69,15 +72,89 @@ public class ExtrasExercises {
 
 
         // 6. Declara una variable static en una clase y accede a ella desde main() sin crear un objeto.
+        
+        saludar();
+
 
         // 7. Importa java.util.Random y genera un número aleatorio del 1 al 10.
+        // Solución:
+
+        Random random = new Random();
+
+        System.out.println(random.nextInt(10) + 1);
+
 
         // 8. Crea una clase con comentarios adecuados explicando cada sección del código.
+        
+        var operacion = new Operaciones(10, 5); // Instanciamos el objeto
+
+        // Llamamos a los métodos 
+        operacion.suma();
+        operacion.resta();
+        operacion.multiplicar();
+        operacion.division();
+
 
         // 9. Define una clase User con una constante APP_NAME, una variable global username y una función que imprima ambas.
+
+        var usuario = new User();
+        usuario.informacion();
 
         // 10. Haz debug del código implementado haciendo uso de sus diferentes herramientas.
 
 
+    }
+
+    
+    // Ejercicio 6: Solución
+    public static void saludar(){
+        System.out.println(saludo);
+    }
+
+    // Ejercicio 8: Solución
+    public static class Operaciones{
+
+        // Atributos de la clase
+        int a;
+        int b;
+        
+        // Constructor
+        public Operaciones(int a, int b){
+            // Valor de los atributos igual al de los parametros del constructor
+            this.a=a;
+            this.b=b;
+        }
+
+        // método suma
+        public void suma(){
+            System.out.println(a + b); // => Imprime la suma
+        }
+
+        // método resta
+        public void resta(){
+            System.out.println(a - b); // => Imprime la resta
+        }
+
+        // método multiplicar
+        public void multiplicar(){
+            System.out.println(a * b); // => Imprime la multiplicación 
+        }
+
+        // método división
+        public void division(){
+            System.out.println(a / b); // => Imprime la división
+        }
+
+    }
+
+    // Ejercicio 9: Solución
+    public static class User{
+        public static final String APP_NAME = "Whatsapp";
+
+        public void informacion(){
+            System.out.println("Aplicación: " + APP_NAME);
+            System.out.println("Usuario: " + username);
+        }
+        
     }
 }
