@@ -68,5 +68,16 @@ public class ExtrasExercises {
         }
 
 
+        // 6. Declara una variable static en una clase y accede a ella desde main() sin crear un objeto.
+
+        // 7. Importa java.util.Random y genera un número aleatorio del 1 al 10.
+
+        // 8. Crea una clase con comentarios adecuados explicando cada sección del código.
+
+        // 9. Define una clase User con una constante APP_NAME, una variable global username y una función que imprima ambas.
+
+        // 10. Haz debug del código implementado haciendo uso de sus diferentes herramientas.
+
+
     }
 }
