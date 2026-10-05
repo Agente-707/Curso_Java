@@ -72,9 +72,9 @@ Cada variable tiene un $\color{#01DE82}{\text{nombre}}$ único y un $\color{#01D
 | char | note | A | char note = 'A'; | 
 | boolean | lie | false | boolean lie = false; |
 
----
-
 Al declarar variables en Java, debes especificar el tipo de la variable antes del nombre de la variable. Esto se conoce como **declaración de tipo**. Una vez que una variable se declara con un tipo determinado, solo puede contener valores de ese tipo.
+
+---
 
 ### Constantes
 
@@ -110,10 +110,99 @@ double b = 3.75;
 double c = a + b; // => c = 2.55 + 3.75 = 6.30
 ```
 
+---
+
 ### Operador módulo 
 
+El operador módulo `%` proporciona el resto de una división.
 
+En Java, se usa con una sintaxis sencilla:
+```java
+int dividend = 10;
+int divisor = 3;
+result = dividend % divisor; // resto de la division (dividend/divisor) => 1 
+```
 
+---
+
+## Incremento/Decremento
+
+Los operadores de incremento y decremento se utilizan para aumentar o disminuir el valor de una variable en 1.
+El operador de incremento se representa por dos signos de más `++`, y el operador de decremento se representa por dos signos de menos `--`.
+
+```java
+// Incremento
+int cont = 5;
+count++; // => cont = 6
+```
+
+```java
+// Decremento
+int cont = 5;
+count--; // => cont = 4
+```
+
+---
+
+## Atajos Aritméticos
+
+Java creó un atajo genial para las operaciones aritméticas de autoasignación.
+
+Por ejemplo, en lugar de escribir:
+```java
+int a = 5;
+a = a + 3; // a contiene 8
+```
+
+Podemos simplificarlo escribiendo `+=`:
+
+```java
+int a = 5;
+a += 3; // a contiene 8
+```
+
+El $\color{#01DE82}{\text{+=}}$ está agregando a $\color{#01DE82}{\text{a}}$ mismo el valor $\color{#01DE82}{\text{3}}$
+
+Esta operación es válida para todas las operaciones aritméticas:
+
+| Operador | Atajo |
+|---|---|
+| + | += |
+| - | -= |
+| * | *= |
+| / | /= |
+| % | %= |
+
+---
+
+### Operadores de comparación 
+
+Operadores de comparación se utilizan para comparar entre dos operandos
+
+La siguiente tabla muestra los posibles operadores de comparación:
+
+| Operador | Significado | Ejemplo |
+|---|---|---|
+| == | Igual | 1 == 2 devuelve $\color{#FF0000}{\text{false}}$ |
+| != | No igual | 1 != 2 devuelve $\color{#01DE82}{\text{true}}$ | 
+| > | Mayor que | 1 > 2 devuelve $\color{#FF0000}{\text{false}}$ | 
+| < | Menor que | 1 < 2 devuelve $\color{#01DE82}{\text{true}}$ |
+| >= | mayor o igual que | 1 >= 2 devuelve $\color{#FF0000}{\text{false}}$ |
+| <= | menor o igual que | 1 <= 2 devuelve $\color{#01DE82}{\text{true}}$ | 
+
+El operador de comparación devuelve $\color{#01DE82}{\text{true}}$ si la comparación es correcta o $\color{#FF0000}{\text{false}}$ de lo contrario.
+
+---
+
+### Operadores lógicos
+
+Los operadores lógicos se utilizan para comprobar combinaciones de comparaciones que devuelven `true` o `false`.
+
+| Operador | Significado | Ejemplo |
+| --- | --- | --- |
+| `&&` | Y: `true` si todos los operadores son `true` | `a && b` | 
+| `\|\|` | O: `true` si algun operador es `true` | ` a \|\| b ` |
+| `!` | NO: `true` si el operando es `false` | ` !a ` | 
 
 ## $\color{#01DE82}{\text{▷}}$ 4) Strings
 
