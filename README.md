@@ -92,10 +92,28 @@ PI = 3.14; // => Error
 ```
 Esto dará como resultado un error porque los valores constantes no se pueden cambiar.
 
-
-
-
 ## $\color{#01DE82}{\text{▷}}$ 3) Operadores
+
+Con los operadores podemos realizar operaciones con los valores numéricos ($\color{#01DE82}{\text{int}}$ o $\color{#01DE82}{\text{double}}$).
+```java
+// Ejemplo
+int a = 2;
+int b = 3;
+int c = a + b; // => c = 3 + 2 = 5
+```
+Al trabajar con números decimales en Java, utilizamos el tipo de dato double, que puede almacenar números con puntos decimales. Los mismos operadores aritméticos (+, -, *, /) funcionan con doubles al igual que lo hacen con los enteros:
+
+```java
+// Ejemplo
+double a = 2.55;
+double b = 3.75;
+double c = a + b; // => c = 2.55 + 3.75 = 6.30
+```
+
+### Operador módulo 
+
+
+
 
 ## $\color{#01DE82}{\text{▷}}$ 4) Strings
 
