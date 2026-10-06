@@ -206,6 +206,55 @@ Los operadores lógicos se utilizan para comprobar combinaciones de comparacione
 
 ## $\color{#01DE82}{\text{▷}}$ 4) Strings
 
+El tipo **String** es un tipo especial que consta de varios **char**.
+
+Para inicializar un valor de cadena en una variable, enciérralo entre comillas dobles:
+
+```java
+String user_name = "Agente-707"; 
+```
+
+### Funciones con Strings
+
+| Función | Acción | Inicialización |
+| --- | --- | --- | 
+| length | Nos da la cantidad de caracteres | user_name.length(); |
+| charAt | Devuelve el caracter en la posición que le mandemos | user_name.charAt(5); | 
+| substring | Nos da una parte del String | user_name.substring(2, 5); |
+| toUpperCase | Convierte todas las letras de un String en mayusculas | user_name.toUpperCase(); |
+| toLowerCase | Convierte todas las letras de un String en Minusculas | user_name.toLowerCase(); |
+| contains | Si el String contiene la cadena que le damos, nos devolvera true | user_name.contains("Agente"); | 
+| equals | Nos da true si dos Strings son iguales | user_name.equals("Agente-707"); | 
+
+---
+
+### Formato de Strings
+
+Utilizaremos la impresión con formato ```printf``` para insertar valores de variable en la cadena:
+
+- ```%s``` es un marcador de posición para cadenas de texto.
+- ```%d``` es un marcador de posición para enteros.
+- ```%f```  es un marcador de posición para números de punto flotante.
+- ```%.2f``` formatea el número de punto flotante a dos lugares decimales.
+
+```java
+// Ejemplo:
+int age = 19;
+String name = "Agente-707";
+double height = 1.75;
+System.out.printf("Name: %s, Age: %d, Height: %.2f\n", name, age, height);
+```
+
+---
+
+### Concatenación de Strings
+
+Otra forma de combinar cadenas con variables es con el operador más +:
+
+```java
+System.out.print("Name: " + name + " Age: " + age + " Height: " + height);
+```
+
 ## $\color{#01DE82}{\text{▷}}$ 5) Condicionales
 
 ## $\color{#01DE82}{\text{▷}}$ 6) Estructuras
