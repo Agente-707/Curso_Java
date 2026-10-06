@@ -257,6 +257,65 @@ System.out.print("Name: " + name + " Age: " + age + " Height: " + height);
 
 ## $\color{#01DE82}{\text{▷}}$ 5) Condicionales
 
+Las instrucciones ```if``` nos permiten ejecutar código con condiciones. Y en caso no se cumplan esas condiciones usamos la instrucción ```else```.
+
+```java
+// Ejemplo:
+int age = 15;
+String status = "None";
+if (age >= 18) {
+    status = "Adult";
+} else {
+    status = "Young";
+}
+```
+
+Si nosotros quisiéramos agregar mas condiciones, podemos hacerlo con la instrucción ```else if```.
+
+```java
+// Ejemplo:
+int age = 68;
+String status = "None";
+if (age < 18) {
+    status = "Young";
+} else if (age >= 18 && age <= 65) {
+    status = "Adult";
+} else {
+    status = "Old";
+}
+```
+
+---
+
+### Sentencia Switch
+
+La instrucción ```switch``` es como una instrucción ```if``` de múltiples opciones. En lugar de evaluar una sola condición, comprueba el valor de una variable con varios casos y ejecuta el código asociado al caso coincidente.
+
+Esta es la estructura básica de una instrucción ```switch```:
+
+```java
+int day = 3;
+String dayName;
+
+switch (day) {
+    case 1:
+        dayName = "Monday";
+        break;
+    case 2:
+        dayName = "Tuesday";
+        break;
+    // ... casos para otros días
+    default:
+        dayName = "Invalid day";
+}
+```
+
+- La palabra clave ```switch``` va seguida de la variable que quieres comprobar entre paréntesis.
+- Cada ```case``` representa un posible valor de la variable.
+- El código dentro de cada ```case``` se ejecuta si la variable coincide con el valor de ese ```case```.
+- La instrucción ```break``` es crucial; sale de ```switch``` después de ejecutar un caso. Sin ella, la ejecución continuaría («fall through») hasta el caso siguiente.
+- El caso ```default``` es opcional y se ejecuta si ningún otro caso coincide.
+
 ## $\color{#01DE82}{\text{▷}}$ 6) Estructuras
 
 ## $\color{#01DE82}{\text{▷}}$ 7) Bucles
