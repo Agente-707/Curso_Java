@@ -8,8 +8,6 @@ Java es un lenguaje de programación increíblemente potente y versátil que te 
 
 En esta sección abarcaremos la estructura básica de un archivo en Java, el uso del método principal `main`, la emisión de mensajes por consola y la documentación mediante comentarios.
 
----
-
 ### Estructura básica de Java
 ```java
 public class Main{
@@ -125,7 +123,7 @@ result = dividend % divisor; // resto de la division (dividend/divisor) => 1
 
 ---
 
-## Incremento/Decremento
+### Incremento/Decremento
 
 Los operadores de incremento y decremento se utilizan para aumentar o disminuir el valor de una variable en 1.
 El operador de incremento se representa por dos signos de más `++`, y el operador de decremento se representa por dos signos de menos `--`.
@@ -144,7 +142,7 @@ count--; // => cont = 4
 
 ---
 
-## Atajos Aritméticos
+### Atajos Aritméticos
 
 Java creó un atajo genial para las operaciones aritméticas de autoasignación.
 
@@ -387,8 +385,35 @@ import java.util.HashSet;
 Set<String> nombres = new HashSet<>(); // vacío 
 Set<Integer> numeros = new HashSet<>();
 Set<Double> notas = new hashSet<>();
-
 ```
+
+---
+
+### Operaciones básicas
+
+Como esta estructura no trabaja con índices, las funciones ```get```, ```indexOf``` y ```set``` no funcionan.  
+
+| Operación | Acción | Inicialización |
+| --- | --- | --- |
+| add | Añade un elemento al Set | nombres.add("Luis"); |
+| size | Devuelve el tamaño del Set | nombres.size(); | 
+| contains | Le pasamos un elemento y nos devuelve $\color{#01DE82}{\text{true}}$ si ese elemento pertenece al Set y $\color{#FF0000}{\text{false}}$ si no pertenece | nombres.contains("Luis"); |
+| remove | Elimina un elemento del Set | nombres.remove("Luis"); |
+| isEmpty | Devuelve $\color{#01DE82}{\text{true}}$ si el Set está vacío y $\color{#FF0000}{\text{false}}$ si no lo está | nombres.isEmpty(); |
+| clear | Elimina todos los elementos del Set | nombres.clear(); |
+
+Si añadimos un elemento repetido, este se va a ignorar.
+
+```java
+import java.util.HashSet;
+
+Set<String> nombres = new HashSet<>(); 
+nombres.add("Luis");
+nombres.add("Luis");  // ya existía, se ignora
+nombres.add("Pedro");
+```
+
+---
 
 
 
