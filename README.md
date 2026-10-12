@@ -318,6 +318,37 @@ switch (day) {
 
 ## $\color{#01DE82}{\text{▷}}$ 6) Estructuras
 
+### Arrays
+
+Un ```array``` es un tipo de estructura que guarda un número fijo de elementos del mismo tipo. Cada elemento de un array es accesible mediante un índice que inicia en cero.
+
+Esta es la estructura de declaración de un array:
+
+```java
+int[] numeros = new int[5];  // => Array sin elementos instanciados => [0, 0, 0, 0, 0]
+String[] nombres = {"Pablo", "Juan", "Antonio"}; // => Array con elementos instanciados (Strings)
+
+// Otra forma equivalente
+double[] notas = new doubles[]{15.5, 18.0, 12.5};
+```
+
+Para acceder o modificar un elemento de un array lo hacemos mediante el índice de dicho elemento 
+
+```java
+int[] a = {10, 20, 30};
+
+System.out.println(a[0]);   // 10
+System.out.println(a[1]);   // 20
+System.out.println(a[2]);   // 30
+a[1] = 99;                  // ahora es {10, 99, 30}
+```
+
+---
+
+
+
+
+
 ## $\color{#01DE82}{\text{▷}}$ 7) Bucles
 
 ## $\color{#01DE82}{\text{▷}}$ 8) Funciones
