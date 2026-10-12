@@ -359,8 +359,6 @@ ArrayList<Integer> numeros = new ArrayList<>();
 ArrayList<Double> notas = new ArrayList<>();
 ```
 
----
-
 ### Operaciones básicas
 
 | Operación | Acción | Inicialización | 
@@ -375,7 +373,22 @@ ArrayList<Double> notas = new ArrayList<>();
 | indexOf | Devuelve el índice de un elemento | nombres.indexOf("Pedro"); |
 | clear | Elimina todos los elementos del ArrayList | nombres.clear(); |
 
+---
 
+### Set
+
+Un ```set``` es una estructura que no permite elementos duplicados. A diferencia de las estructuras anteriores, los sets no tienen índices.  
+
+Declaración de un Set:
+
+```java
+import java.util.HashSet;
+
+Set<String> nombres = new HashSet<>(); // vacío 
+Set<Integer> numeros = new HashSet<>();
+Set<Double> notas = new hashSet<>();
+
+```
 
 
 
