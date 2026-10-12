@@ -345,6 +345,37 @@ a[1] = 99;                  // ahora es {10, 99, 30}
 
 ---
 
+### ArrayList
+
+un ```ArrayList``` es una lista de tamaño dinámico que internamente usa un array y lo redimensiona automáticamente cuando se van agregando más elementos.
+
+Declaración de un ArrayList:
+
+```java
+import java.util.ArrayList;
+
+ArrayList<String> nombres = new ArrayList<>();  // vacío 
+ArrayList<Integer> numeros = new ArrayList<>();
+ArrayList<Double> notas = new ArrayList<>();
+```
+
+---
+
+### Operaciones básicas
+
+| Operación | Acción | Inicialización | 
+| --- | --- | --- |
+| add | Añade un elemento al ArrayList | nombres.add("Luis"); |
+| get | Llama a un elemento por medio de su índice | nombres.get(0); |
+| set | Reemplaza el valor de un elemento llamando a su índice | nombres.set(0, "Pedro"); |
+| remove | Elimina un elemento del ArrayList | nombres.remove("Pedro"); |
+| size | Devuelve el tamaño del ArrayList | nombres.size(); |
+| isEmpty | Devuelve $\color{#01DE82}{\text{true}}$ si el ArrayList está vacío y $\color{#FF0000}{\text{false}}$ si no lo está | nombres.isEmpty(); |
+| contains | Le pasamos un elemento y nos devuelve $\color{#01DE82}{\text{true}}$ si ese elemento pertenece al ArrayList y $\color{#FF0000}{\text{false}}$ si no pertenece | nombres.contains("Pedro"); |
+| indexOf | Devuelve el índice de un elemento | nombres.indexOf("Pedro"); |
+| clear | Elimina todos los elementos del ArrayList | nombres.clear(); |
+
+
 
 
 
