@@ -415,6 +415,31 @@ nombres.add("Pedro");
 
 ---
 
+### Maps
+
+un ```Map``` guarda **pares -> clave**. Cada clave es única y se usa para acceder al valor asociado. 
+
+Declaración de un Map:
+
+```java
+import java.util.HashMap;
+
+Map<String, Integer> edades = new HashMap<>();   // clave: String   valor: int 
+```
+
+---
+
+### Operaciones básicas
+
+| Operación | Acción | Inicialización |
+| --- | --- | --- | 
+| put | Añade la clave y el valor de un elemento en el Map | edades.put("Luis", 19); | 
+| get | Llama la clave del elemento y devuelve el valor | edades.get("Luis"); |
+| containsKey | Devuelve $\color{#01DE82}{\text{true}}$ si el Map contiene la clave que le pasamos y $\color{#FF0000}{\text{false}}$ si no lo contiene | edades.containsKey("Luis"); |
+| containsValue | Devuelve $\color{#01DE82}{\text{true}}$ si el Map contiene el valor que le pasamos y $\color{#FF0000}{\text{false}}$ si no lo contiene | edades.containsValue(19); |
+| remove | Le pasamos la llave y elimina el elemento junto con su valor | edades.remove("Luis"); |
+| isEmpty | Devuelve $\color{#01DE82}{\text{true}}$ si el Map esta vacio y $\color{#FF0000}{\text{false}}$ si no lo esta | edades.isEmpty(); | 
+| clear | Elimina todos los elementos del Map | edades.clear(); | 
 
 
 
