@@ -441,9 +441,56 @@ Map<String, Integer> edades = new HashMap<>();   // clave: String   valor: int
 | isEmpty | Devuelve $\color{#01DE82}{\text{true}}$ si el Map esta vacio y $\color{#FF0000}{\text{false}}$ si no lo esta | edades.isEmpty(); | 
 | clear | Elimina todos los elementos del Map | edades.clear(); | 
 
-
-
 ## $\color{#01DE82}{\text{▷}}$ 7) Bucles
+
+A veces, al programar, es necesario realizar la misma operación, o casi la misma, un par de veces. 
+Para evitar escribir lo mismo una y otra vez, podemos usar **bucles**.
+
+### Bucle While
+Un bucle ```while``` nos permite seguir iterando mientras se cumpla una condición.
+Para usar un bucle while, escribe:
+
+```java
+while (condition) {
+    // Código a ser ejecutado
+}
+```
+
+El codigo se ejecutara si la condicion es $\color{#01DE82}{\text{true}}$.
+
+---
+
+### Bucle Do-while
+
+El bucle ```do-while``` es similar al bucle **while**, pero con una diferencia clave: el bloque de código se ejecuta al menos una vez antes de que se verifique la condición.
+
+El cuerpo del bucle siempre se ejecutara la primera vez, independientemente de si la condicion es $\color{#01DE82}{\text{true}}$ o $\color{#FF0000}{\text{false}}$.
+
+Estructura básica del bucle ```do-while```: 
+
+```java
+do {
+    // Código a ser ejecutado
+} while (condition);
+```
+
+La palabra clave ```do``` marca el inicio del bucle, seguida del bloque de código entre llaves. Después del bloque de código, la palabra clave ```while``` introduce la condición. El bucle continuará ejecutándose mientras la condición sea $\color{#01DE82}{\text{true}}$.
+
+---
+
+### Bucle for
+
+Un bucle ```for``` es una estructura que repite un bloque de código un número determinado de veces. Es ideal cuando sabes de antemano cuántas iteraciones necesitas.
+
+El bucle ```for``` tiene la siguiente sintaxis:
+
+```java
+for (inicialización; condición; actualización) {
+    // Código a ser ejecutado
+}
+```
+
+La inicialización, la condición y la actualización determinan cuál es el valor de inicio y cuál es el valor de fin.
 
 ## $\color{#01DE82}{\text{▷}}$ 8) Funciones
 
