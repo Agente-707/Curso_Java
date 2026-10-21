@@ -494,6 +494,56 @@ La inicialización, la condición y la actualización determinan cuál es el val
 
 ## $\color{#01DE82}{\text{▷}}$ 8) Funciones
 
+Un función es una secuencia de código que tiene un nombre. El propósito de las funciones es reutilizar un fragmento de código varias veces.
+
+Por ejemplo, crearemos una función llamada ```greet``` la cual tendrá la siguiente estructura:
+
+```java
+public static void greet() {
+    System.out.println("Bienvenidos a Java!");
+}
+```
+
+Para llamar a la función, escribimos ```greet();```:
+
+```java
+greet(); // => "Bienvenidos a Java!"
+System.out.println("Nueva sesión...");
+greet(); // => "Bienvenidos a Java!"
+System.out.println("Otra sesión...");
+greet(); // => "Bienvenidos a Java!"
+```
+
+---
+
+### Parámetros de una Función 
+
+Las variables enumeradas en la declaración de una función se llaman **parámetros**; los valores que proporcionas cuando llamas a la función se llaman **argumentos**.
+
+```java
+method_name(value1, value2, value3, ...);
+```
+
+---
+
+### Tipos de Retorno
+
+La instrucción ```return``` en una función se utiliza para especificar el valor o los valores que la función debe producir como salida. Por ejemplo, la siguiente función producirá 100:
+
+```java
+public static int functionName() {
+    return 100;
+}
+```
+
+Para asignar el valor a una variable, escribe:
+
+```java
+int number = functionName();
+```
+
+Ahora la variable ```number``` contendrá ```100``` porque esto es lo que devolvió el método.
+
 ## $\color{#01DE82}{\text{▷}}$ 9) Programación Orientada a Objetos (POO)
 
 ## $\color{#01DE82}{\text{▷}}$ 10) Excepciones
