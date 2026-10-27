@@ -546,6 +546,94 @@ Ahora la variable ```number``` contendrá ```100``` porque esto es lo que devolv
 
 ## $\color{#01DE82}{\text{▷}}$ 9) Programación Orientada a Objetos (POO)
 
+La Programación Orientada a Objetos (POO) nos permite organizar nuestro código en objetos, los cuales combinan ```atributos``` y ```métodos``` como los datos y los comportamientos de un objeto, respectivamente.
+
+### Atributos
+
+Los atributos son las variables declaradas dentro de una clase que guardan el estado de un objeto. Cada objeto tiene su propia copia de ellos.
+
+Ejemplo:
+
+```java
+public class Estudiante {
+    String nombre;   // atributo
+    int ciclo;       // atributo
+    double promedio; // atributo
+}
+```
+
+---
+
+### Modificadores de Acceso
+
+Son palabras clase que nos permiten controlar desde donde se puede modificar o llamar a un atributo
+
+```java
+public class Producto {
+    public String codigo;      // PUBLIC => Puedes acceder a él desde cualquier otra clase o paquete.
+    protected double precio;   // PROTECTED => Solo puedes acceder a él dentro de la misma clase o en una subclase.
+    String categoria;          // ATRIBUTO NORMAL => Accedes a él dentro del mismo paquete.
+    private int stock;         // PRIVATE => Solo puede acceder a él dentro de su clase
+}
+```
+
+---
+
+### Constructor
+
+Un constructor es un método especial que se ejecuta automáticamente cuando creas un objeto con ```new```. Su función principal es inicializar los atributos del objeto.
+
+Ejemplo:
+
+```java
+public class Estudiante {
+    String nombre;   
+    int ciclo;        
+    double promedio;
+
+    // Constructor
+    public Estudiante(String nombre, int ciclo, double promedio){
+       this.nombre = nombre;
+       this.ciclo = ciclo;
+       this.promedio = promedio;
+    }
+}
+
+Estudiante estudiante = new Estudiante("Luis", 3, 9);
+```
+
+---
+
+### Método
+
+Un método es un bloque de código con nombre que define el comportamiento de un objeto.
+
+Ejemplo:
+
+```java
+public class Estudiante {
+    private String nombre;
+    private int ciclo;
+
+    public Estudiante(String nombre, int ciclo) {
+        this.nombre = nombre;
+        this.ciclo = ciclo;
+    }
+
+    // Método
+    public void presentarse() {
+        System.out.println("Soy " + nombre + ", del ciclo " + ciclo);
+    }
+}
+
+Estudiante e = new Estudiante("Luis", 3);
+e.presentarse();  // => Soy Luis, del ciclo 3
+```
+
+
+
+
+
 ## $\color{#01DE82}{\text{▷}}$ 10) Excepciones
 
 ## $\color{#01DE82}{\text{▷}}$ 11) Extras
