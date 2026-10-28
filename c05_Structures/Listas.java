@@ -1,20 +1,28 @@
 package c05_Structures;
 
+import java.util.List;
 import java.util.ArrayList; // Agregamos esta línea para poder trabajar con ArrayList
 
-public class List {
+public class Listas {
     public static void main(String[] args){
+
         /*
-        El ArrayList, a diferencia del Array común, 
-        es de tipo dinámico, podemos inicializarlos
-        sin definir cuantos elementos va a tener y 
-        podemos agregarle tantos elementos como 
-        queramos (Siempre y cuando sean del mismo
-        de variable).  
+        List es una interfaz del paquete java.util
+        la cual representa una colección ordenada de
+        elementos donde:
+        
+        - Los elementos mantienen un orden de inserción (puedes acceder a ellos por índice).
+        - Se permiten elementos duplicados.
+        - Su tamaño es dinámico (puede crecer o reducirse según cuantos elementos agregues o quites).
+
+        List usa una de sus implementaciones como:
+        - ArrayList
+        - LinkedList
         */
 
         // Declaración y creación
-        ArrayList<String> names = new ArrayList<>();  // nombre del ArrayList: 'names' => ArrayList de strings
+        List<String> names = new ArrayList<>();  // nombre del ArrayList: 'names' => ArrayList de strings
+
         /*
         Se define por defecto que tipo de datos
         se va a almacenar en el ArrayList 'ArrayList<String>' 
@@ -27,7 +35,8 @@ public class List {
         // Por lo que se marca el tipo de dato en el segundo bloque 'new ArrayList<Integer>()'
         // En el primer caso (names) lo habíamos marcado en el primer bloque 'ArrayList<String> names' por lo que ya no era necesario marcarlo en el segundo bloque
 
-        // Tamaño
+
+        // Tamaño 'size'
 
         System.out.println(names.size()); // => 0
         // No le hemos inicializado ningun tamaño
@@ -35,7 +44,7 @@ public class List {
         // tamaño '0'
 
 
-        // Añadir elementos
+        // Añadir elementos 'add'
 
         // names[0] = "Luis" => Error: no podemos acceder a un indice de un ArrayList y darle un valor
         // La forma correcta de añadir elementos es con la palabra reservada 'add'
@@ -46,21 +55,13 @@ public class List {
         System.out.println(names.size()); // => 3
 
 
-        // Acceder a los elementos
+        // Acceder a los elementos 'get', 'getFirst' y 'getLast' 
 
         // System.out.println(names[0]); => error: No podemos acceder a los elementos de un ArrayList de esta forma (solo es posible con Arrays)
         // La forma correcta es usando 'get'
         System.out.println(names.getFirst()); // Accede al primer elemento => "Luis"
         System.out.println(names.get(1)); //accede al segundo valor (indice 1) => "Pareja"
         System.out.println(names.getLast());  // Accede al ultimo elemento => "Agente-707"
-
-        /*
-        Nota: Los elementos de los ArrayLists 
-        también están ordenados por índices, podemos
-        acceder a ellos con 'nombre_del_ArrayList.get(ind)',
-        siendo el primer índice '0' y el último 'su tamaño - 1'
-        */
-
 
         // Modificar los elementos 'set'
         names.set(2, "XxLuisxX"); 
