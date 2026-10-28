@@ -630,6 +630,161 @@ Estudiante e = new Estudiante("Luis", 3);
 e.presentarse();  // => Soy Luis, del ciclo 3
 ```
 
+### Herencia 
+
+La herencia nos permite reutilizar los atributos y métodos de una clase (clase madre) dentro de otra clase (clase hija o subclase).
+
+Esta funcion se delcara con ```extends```, los atributos heredados se declaran con ```super()``` en el constructor de la clase hija, mientras que los métodos se heredan por si solos (no hace falta escribirlos dentro de la clase hija).
+
+Ejemplo:
+
+```java
+public class Animal { // => Clase madre
+    protected String nombre;
+
+    public Animal(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public void comer() {
+        System.out.println(nombre + " está comiendo");
+    }
+}
+
+public class Perro extends Animal { // => Clase hija
+    public Perro(String nombre) {
+        super(nombre);
+    }
+
+    public void ladrar() {
+        System.out.println("¡Guau!");
+    }
+}
+
+Perro perro = new Perro("Firulais");
+perro.comer();   // heredado de Animal
+perro.ladrar();  // propio de Perro
+```
+
+---
+
+### Sobreescritura de métodos(@Override)
+
+Las subclases pueden redefinir el contenido de un método heredado para darle un comportamiento propio. Para realizar esta acción, escribimos ```@Override``` encima del método heredado y modificamos su contenido. 
+
+Ejemplo:
+
+```java
+public class Animal {
+    public void sonido() {
+        System.out.println("Sonido genérico");
+    }
+}
+
+public class Gato extends Animal {
+    @Override
+    public void sonido() {
+        System.out.println("Miauuuu"); // => Cambiamos la salida del método sonido
+    }
+}
+```
+
+---
+
+### Interfaces
+
+Una interfaz define un conjunto de métodos o atributos constantes los cuales pueden ser implementados en varias clases. Una clase puede acceder a los métodos de una interfaz con ```implements```.
+
+Ejemplo:
+
+```java
+public interface Volador { // => Interfaz
+    void volar();
+}
+
+public class Pajaro implements Volador {
+    @Override
+    public void volar() {
+        System.out.println("El pájaro vuela");
+    }
+}
+```
+
+Los métodos de una interfaz son públicos y abstractos por defecto (no tienen nada escrito adentro). Los metodos de una interfaz pueden referenciar a cualquier clase que la implemente.
+
+Ejemplo:
+
+```java
+public interface Figura {  // => Interfaz
+    double calcularArea();
+}
+
+public class Circulo implements Figura { 
+    private double radio;
+
+    public Circulo(double radio) { this.radio = radio; }
+
+    @Override
+    public double calcularArea() {
+        return Math.PI * radio * radio;
+    }
+}
+
+public class Rectangulo implements Figura {
+    private double base, altura;
+
+    public Rectangulo(double base, double altura) {
+        this.base = base;
+        this.altura = altura;
+    }
+
+    @Override
+    public double calcularArea() {
+        return base * altura;
+    }
+}
+
+Figura[] figuras = { new Circulo(2), new Rectangulo(3, 4) };
+for (Figura f : figuras) {
+    System.out.println(f.calcularArea());
+}
+```
+
+---
+
+### Clase Abstracta 
+
+Una clase abstracta es una clase que no se puede ser instanciada y que sirve como base para otras clases que hereden de esta. El cuerpo de un método abstracto solo puede ser definida desde una subclase.
+
+Ejemplo:
+
+```java
+public abstract class Animal {
+    protected String nombre;
+
+    public Animal(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public abstract void hacerSonido(); // => Método abstracto
+}
+
+public class Perro extends Animal {
+    public Perro(String nombre) {
+        super(nombre);
+    }
+
+    @Override
+    public void hacerSonido() {
+        System.out.println("¡Guau!");
+    }
+}
+
+Animal a = new Animal("X");     // => ERROR: no se puede instanciar una clase abstracta
+Animal p = new Perro("Rex");    
+p.hacerSonido();                // => ¡Guau!
+```
+
 
 
 
