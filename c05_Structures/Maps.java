@@ -4,6 +4,7 @@ import java.util.HashMap;
 
 public class Maps {
     public static void main(String[] args) {
+
         /*
         Los maps son un tipo de estructura
         que almacenan elementos que cuentan
@@ -16,7 +17,7 @@ public class Maps {
         var numbers = new HashMap<Integer, String>();   // new HashMap<clave: Integer, valor: String>()
 
 
-        // Tamaño
+        // Tamaño 'size'
 
         System.out.println(names.size()); // => 0
         // No le hemos añadido ningún elemento
@@ -43,7 +44,7 @@ public class Maps {
 
         // Acceder a los elementos 'get'
         // Podemos acceder a los elementos de un map usando 'get(llave)'
-        // No tenemos índices, pero podemos acceder a los elementos por medio de las llaves
+        // No tenemos índices, pero podemos acceder a los valores por medio de las llaves
 
         System.out.println(names.get("Luis")); // => "luis@gmail.com" - me devuelve el valor
         System.out.println(names.get("holaaaa")); // => null - esa llave no existe en 'names'
@@ -72,36 +73,36 @@ public class Maps {
         System.out.println(names); // => solo le queda un elemento
 
             
-        // Limpiar HashMap
+        // Limpiar HashMap 'clear'
         names.clear(); // Elimina todos los elementos del map
         System.out.println(names); // => {}
 
             
-        // Modificación de elementos 
-        
-        names.put("Luis", "luis@gmail.com"); // Agregamos un elemento
-        System.out.println(names); 
+        // Modificación de elementos 'put'
 
-        names.put("Luis", "luispareja@gmail.com"); // Agregamos otro elemento con la misma llave pero con diferente valor
-        System.out.println(names); // => el valor de nuestro primer elemento cambia "luis@gmail.com" => "luispareja@gmail.com"
         /*
-        Nota:
         Si hacemos un put de una clave
         que ya existe en nuestro map y le
         cambiamos el valor, el primer valor
         de nuestro elemento anterior cambiara. 
         */
         
+        names.put("Luis", "luis@gmail.com"); // Agregamos un elemento
+        System.out.println(names); 
+
+        names.put("Luis", "luispareja@gmail.com"); // Agregamos otro elemento con la misma llave pero con diferente valor
+        System.out.println(names); // => el valor de nuestro primer elemento cambia "luis@gmail.com" => "luispareja@gmail.com"
+
+        
         // replace
-        names.replace("Agente-707", "agente-707@gmail.com"); // Reemplaza el valor si su llave existe
+        // Reemplaza el valor si su llave existe
+        names.replace("Agente-707", "agente-707@gmail.com"); 
         System.out.println(names); // "Agente-707" no existe en 'names' => no ocurre ninguna modificación
 
         // putIfAbsent
-        names.putIfAbsent("Agente-707", "agente-707@gmail.com"); // Lo añade solo si no existe dentro del map
+        // Agrega un elemento solo si no existe dentro del map
+        names.putIfAbsent("Agente-707", "agente-707@gmail.com"); 
         System.out.println(names);
-
-
-        // Otras operaciones
 
         // isEmpty
         // Comprueba si nuestro map esta vacío o no (true/false)
