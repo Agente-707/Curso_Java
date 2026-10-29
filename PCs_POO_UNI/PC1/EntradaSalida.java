@@ -1,5 +1,6 @@
 package PCs_POO_UNI.PC1;
 
+
 import java.util.Random;
 
 // Ejercicio 1
