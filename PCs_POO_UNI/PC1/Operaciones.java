@@ -4,6 +4,8 @@ import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.text.NumberFormat;
 
+// Ejercicio 2
+
 class Operaciones {
     static BigDecimal bn1, bn2;
     static NumberFormat numero = NumberFormat.getNumberInstance();
