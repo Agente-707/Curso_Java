@@ -861,3 +861,144 @@ public void retirar(double monto) throws saldoInsuficienteException{
 ```
 
 ## $\color{#01DE82}{\text{▷}}$ 11) Extras
+
+### Import 
+
+Un paquete (package) es una forma de agrupar clases que guardan una relacion entre si, como una carpeta que organiza el código y evita conflictos de nombres. Por ejemplo, ```java.util``` contiene utilidades como ```ArrayList```, ```Scanner``` y ```Random```.
+
+Sintaxis básica:
+
+```java
+import java.util.Scanner;
+
+public class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+    }
+}
+```
+
+Los ```import``` van después de la declaración ```package``` y antes de la clase.
+
+```java
+package c10_Extras;
+
+import java.util.List;
+import java.util.ArrayList;
+
+public class Main{ ... }
+```
+
+Import con comodín ```*``` importa todas las clases de un paquete.
+
+```java
+import java.util.Scanner; // => importa solo Scanner
+import java.util.*;       // => importa todas las clases de java.util 
+```
+
+---
+
+### Scanner
+
+```Scanner``` es una clase de ```java.util``` que sirve para leer datos que son escritos por el usuario por consola.
+
+Ejemplo:
+
+```java
+import java.util.Scanner;
+
+public class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Tu nombre: ");
+        String nombre = sc.nextLine();
+
+        System.out.println("Hola, " + nombre);
+        sc.close();
+    }
+}
+```
+
+---
+
+#### Metodos principales de Scanner:
+
+| Método | Lee | Ejemplo de entrada | 
+| --- | --- | --- | 
+| nextLine() | Una línea completa (hasta el Enter) | ```Hola a todos :)``` |
+| next() | Una palabra (hasta el siguiente espacio) | ```Hola```|
+| nextInt() | Un ```int``` | ```67``` |
+| nextDouble() | Un ```double``` | ```3.14 ```|
+| nextLong() | un ```long``` | ```1234567789567456``` |
+| nextBoolean() | un ```boolean``` | ```true``` |
+
+---
+
+### Variables estáticas y locales
+
+
+#### Variables locales
+Las variables locales se declaran dentro de un método, constructor o bloque (```if```, ```for```, ```while```, etc). Solo existen mientras ese bloque se ejecuta.
+
+Ejemplo:
+
+```java
+public static void saludar(){
+    String mensaje = "Hola"; // => 'mensaje' es local al método
+    System.out.println(mensaje);
+}
+
+public static void main(String[] args){
+    saludar();
+    System.out.println(mensaje); // => Error: No se pudo encontrar el simbolo
+}
+```
+
+---
+
+#### Características
+
+- Su alcance (scope) se limita al bloque ```{ }``` donde se declaran.
+
+- No tienen valor por defecto.
+
+- No pueden llevar modificadores de acceso (```public```, ```private```).
+
+#### Variable estáticas
+
+Son variables con una sola copia compartida por todos los objetos de una clase. Se declaran con ```static```.
+
+Ejemplo:
+
+```java
+public class Contador{
+    static int total = 0; // => Compartida por todos
+
+    Contador(){
+        total++;
+    }
+}
+```
+```java
+new Contador();
+new Contador();
+System.out.println(Contador.total); // => 2
+```
+
+Se acceden con el nombre de la clase (```Contador.total```) y existen desde que la clase se carga hasta que termina el programa.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
