@@ -988,6 +988,105 @@ System.out.println(Contador.total); // => 2
 
 Se acceden con el nombre de la clase (```Contador.total```) y existen desde que la clase se carga hasta que termina el programa.
 
+## $\color{#01DE82}{\text{▷}}$ 11) Archivos
+
+Para manejar la lectura y escritura de archivos, Java nos ofrece dos enfoques principales:
+
+- ```java.nio.file``` => ```Files```, ```Path```
+- ```java.io``` => ```FileReader```, ```BufferedReader```, ```FileWriter```, etc
+
+Muchas de estas operaciones lanzan ```IOException```, por lo que debemos manejarlas con ```try-catch``` o declararlas con ```throws```.
+
+### Escritura de archivos
+
+Aplicación:
+
+```java
+import java.nio.file.*;
+import java.io.IOException;
+import java.util.List;
+
+public class Main{
+    public static void main(String[] args){
+        Path ruta = Path.of("salida.txt");
+        try{
+            Files.writeString(ruta, "Hola mundo\nSegunda línea\n"); // => Escribe un texto (si ya existe lo sobre escribe)
+
+            File.write(ruta, List.of("uno", "dos", "tres")); // => Escribe una lista de lineas
+
+            Files.writeString(ruta, "otra línea\n", StandardOpenOption.CREATE, StandardOpenOption.APPEND); // => Agrega al final (sin borra lo anterior)
+        } catch(IOException e){
+            System.out.println("Error al escribir: " + e.getMessage());
+        }
+    }
+}
+```
+
+Por defecto, ```writeString``` y ```write``` crean el archivo si no existe y lo sobrescriben si existe. Para añadir al final usas ```APPEND```.
+
+---
+
+### Lectura de archivos
+
+Aplicación:
+
+```java
+try{
+    String contenido = Files.readString(Path.of("salida.txt"));  // => Todo el contenido del archivo lo pasa a String
+    List<String> lineas = Files.readAllLines(Path.of("salida.txt")); // una línea por elemento
+
+    for(String linea : lineas) {
+        System.out.println(linea);
+    }
+
+} catch (IOException e){
+    Systm.out.println("Error al leer: " + e.getMessage());
+}
+```
+
+---
+
+### BufferedReader y BufferedWriter
+
+Se utiliza para la lectura y escritura de archivos grandes.
+
+#### Lectura con BufferedReader:
+
+```java
+import java.io.*
+
+try(BufferedReader br = new BufferedReader(new FileReader("datos.txt"))){
+    String linea;
+
+    while((linea = br.readLine()) != null){ // readLine() devuelve null cuando llega al final del archivo
+        System.out.println(linea);
+    }
+
+} catch(IOException e){
+    System.out.println("Error: " + e.getMessage());
+}
+```
+
+---
+
+#### Escritura con BufferedWriter
+
+```java
+try(BufferedWriter bw = new BufferedWriter (new FileWriter("salida.txt"))){
+    bw.write("Primera línea");
+    bw.newLine(); // => salto de línea
+    bw.write("Segunda línea");
+}catch (IOException e){
+    System.out.println("Error: " + e.getMessage());
+}
+```
+
+
+
+
+
+
+
 
 
 
