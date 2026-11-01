@@ -12,6 +12,10 @@ public class PeajeApp {
 
     public static void main(String[] args){
         cargarDatos();
+        obtenerCamionesGrandes(3);
+        reporteVehiculos();
+        reporteTipoMontos();
+        reporteCamionesGrandes();
     }
 
     static void cargarDatos(){
@@ -58,7 +62,7 @@ public class PeajeApp {
         System.out.println("Tipo    Monto");
         double suma = 0;
 
-        for(Map.Entry ma : tipoMontos.entrySet()){
+        for(Map.Entry ma : tiposMontos.entrySet()){
             suma += (double)ma.getValue();
             System.out.printf("%-6s %6.1f\n", ma.getKey(), ma.getValue());
         }
