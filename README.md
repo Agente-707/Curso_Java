@@ -785,10 +785,79 @@ Animal p = new Perro("Rex");
 p.hacerSonido();                // => ¡Guau!
 ```
 
-
-
-
-
 ## $\color{#01DE82}{\text{▷}}$ 10) Excepciones
+
+Una excepción es un evento que interrumpe el flujo de un programa cuando ocurre un error 
+
+Casos de errores:
+
+- Dividir entre cero
+- Acceder a una posición invalida de un arreglo
+- Abrir un archivo que no existe
+
+En java, existe un mecanismo para detectar esos errores y decidir qué hacer, en vez de que el programa se caiga.
+
+### Try, catch y finally
+
+- ```try```: Revisa el pedazo de código que podria fallar.
+- ```catch```: Si ocurre una excepción, la capturamos.
+- ```finally```: Se ejecuta haya o no excepción. 
+
+Aplicación:
+
+```java
+try{
+    int resultado = 10 / 0;
+    System.out.println(resultado);
+} catch (ArithmeticException e){
+    System.out.println("Error: " + e.getMessage());
+} finally{
+    System.out.println("Esto se ejecuta siempre");
+}
+```
+
+---
+
+### Throw y throws
+
+```throw``` lanza una excepción explícitamente ```throws``` en la firma del método avisa que ese método puede lanzar una excepción checked, y deja la responsabilidad a quien lo llame.
+
+Ejemplo:
+
+```java
+public static void validarEdad(int edad){
+    if (edad < 0){
+        throw new IllegalArgumentException("La edad no puede ser negativa");
+    }
+}
+
+public static String leerArchivo(String ruta) throws IOException{
+    return Files.readString(Path.of(ruta));
+}
+```
+
+---
+
+### Excepciones personalizadas
+
+Podemos crear nuestras propias escepciones extendiendo de ```Exception``` o ```RuntimeException```.
+
+Ejemplo:
+
+```java
+public class SaldoInsuficienteException extends Exception{
+    public saldoInsuficienteException(String mensaje){ // => Excepción personalizada 
+        super(mensaje);
+    }
+}
+
+public void retirar(double monto) throws saldoInsuficienteException{
+    if(monto > saldo){
+        throw new SaldoInsuficienteException("Saldo insuficiente");
+    }
+
+    saldo -= monto; 
+}
+```
 
 ## $\color{#01DE82}{\text{▷}}$ 11) Extras
